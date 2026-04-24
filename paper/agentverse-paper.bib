@@ -1,0 +1,372 @@
+% agentverse-paper.bib
+% Bibliography for "Infrastructure for the Agentic Web:
+% Gap Analysis and Architecture from the Agentverse Platform"
+% Robin Dey and Panyanon Viradecha, OpenHub Research, 2026
+%
+% Fact-checked 2026-04-24 by fetch-researcher
+% All arXiv numbers and author names verified against primary sources
+
+% ============================================================
+% Agent Infrastructure
+% ============================================================
+
+% arXiv:2501.10114 — verified correct. Accepted TMLR 2025.
+@article{chan2025infrastructure,
+  author    = {Alan Chan and Kevin Wei and Sihao Huang and Nitarshan Rajkumar
+               and Elija Perrier and Seth Lazar and Gillian K. Hadfield and
+               Markus Anderljung},
+  title     = {Infrastructure for {AI} Agents},
+  journal   = {Transactions on Machine Learning Research},
+  year      = {2025},
+  note      = {arXiv:2501.10114}
+}
+
+% arXiv:2511.07265 — verified. Authors: Hussein et al. (NOT Kapoor et al.)
+@misc{hussein2025forecast,
+  author    = {Ahmed Refaey Hussein and others},
+  title     = {When Intelligence Overloads Infrastructure: {A} Forecast Model
+               for {AI}-Driven Bottlenecks},
+  year      = {2025},
+  howpublished = {arXiv preprint arXiv:2511.07265},
+  note      = {Projects AI agent population to grow 100$\times$ between
+               2026 and 2036, reaching 50B--5T instances}
+}
+
+% arXiv:2509.01063 — verified. Authors: Hadfield & Koh (NOT Horton et al.)
+@misc{hadfield2025agenteconomy,
+  author    = {Gillian K. Hadfield and Andrew Koh},
+  title     = {An Economy of {AI} Agents},
+  year      = {2025},
+  howpublished = {arXiv preprint arXiv:2509.01063},
+  note      = {Submitted September 1, 2025.
+               Hadfield: Johns Hopkins; Koh: MIT}
+}
+
+% arXiv:2510.25445 — verified.
+@misc{agentic2025survey,
+  author    = {Mohamad Abou Ali and Fadi Dornaika},
+  title     = {Agentic {AI}: {A} Comprehensive Survey of Architectures,
+               Applications, and Future Directions},
+  year      = {2025},
+  howpublished = {arXiv preprint arXiv:2510.25445},
+  note      = {University of the Basque Country}
+}
+
+% ============================================================
+% Agent Memory
+% ============================================================
+
+% arXiv:2501.13956 — the actual Zep paper (NOT 2602.05665 which is Yang et al.)
+% Performance figures: 63.8% (Zep) vs 49.0% (flat vector stores) on LongMemEval verified.
+@misc{zepgraphiti2025,
+  author    = {{Zep AI}},
+  title     = {Zep: {A} Temporal Knowledge Graph Architecture for Agent Memory},
+  year      = {2025},
+  howpublished = {arXiv preprint arXiv:2501.13956},
+  note      = {Achieves 63.8\% accuracy on LongMemEval (GPT-4o) vs 49.0\%
+               for flat vector stores}
+}
+
+% arXiv:2602.05665 — Yang et al. graph memory SURVEY (different from Zep paper)
+@misc{yang2026graphsurvey,
+  author    = {Chang Yang and Chuang Zhou and others},
+  title     = {Graph-based Agent Memory: Taxonomy, Techniques, and Applications},
+  year      = {2026},
+  howpublished = {arXiv preprint arXiv:2602.05665},
+  note      = {Survey paper, DEEP-PolyU group. Published February 5, 2026}
+}
+
+@misc{mem0blog2026,
+  author    = {{Mem0}},
+  title     = {State of {AI} Agent Memory 2026},
+  year      = {2026},
+  howpublished = {\url{https://mem0.ai/blog/state-of-ai-agent-memory-2026}},
+  note      = {Reports 21 frameworks, 19 vector stores, 3 hosting models:
+               managed cloud, open-source self-hosted, and local MCP}
+}
+
+@misc{oracle2026memory,
+  author    = {{Oracle}},
+  title     = {Introducing {Oracle AI} Agent Memory},
+  year      = {2026},
+  howpublished = {\url{https://blogs.oracle.com/database}},
+  note      = {Accessed April 2026}
+}
+
+% ============================================================
+% Agent Identity and Trust
+% ============================================================
+
+% arXiv:2511.02841 — verified. Lead: Sandro Rodriguez Garzon (TU Berlin).
+% Accepted ICAART 2026.
+@misc{garzon2025agentdid,
+  author    = {Sandro Rodriguez Garzon and others},
+  title     = {{AI} Agents with Decentralized Identifiers and Verifiable
+               Credentials},
+  year      = {2025},
+  howpublished = {arXiv preprint arXiv:2511.02841},
+  note      = {Accepted ICAART 2026 (18th International Conference on Agents
+               and Artificial Intelligence). v2: December 15, 2025}
+}
+
+@misc{moltrust2026,
+  author    = {{MolTrust}},
+  title     = {Trust Infrastructure for {AI} Agents},
+  year      = {2026},
+  howpublished = {\url{https://moltrust.ch}},
+  note      = {W3C Verifiable Credentials for AI agents; ERC-8004 on-chain
+               registration; Base blockchain anchoring; MCP server available}
+}
+
+@misc{w3c2022did,
+  author    = {{W3C}},
+  title     = {Decentralized Identifiers ({DIDs}) v1.0},
+  year      = {2022},
+  howpublished = {\url{https://www.w3.org/TR/did-core/}}
+}
+
+% ============================================================
+% Protocol Standards
+% ============================================================
+
+@misc{a2a2026,
+  author    = {{Linux Foundation and Google}},
+  title     = {{Agent2Agent} ({A2A}) Protocol v1.0},
+  year      = {2026},
+  howpublished = {\url{https://a2a-protocol.org}},
+  note      = {v1.0 announced April 9, 2026. 150+ supporting organisations.
+               Linux Foundation governance. Founding TSC partners: AWS, Cisco,
+               Google, IBM Research, Microsoft, Salesforce, SAP, ServiceNow.
+               Adds Signed Agent Cards and formal AP2 extension}
+}
+
+% MCP uses date-string versioning (e.g. 2025-11-25), NOT semantic versions.
+% "version 2.1" and "v1.27" do not exist in the MCP specification.
+@misc{mcp2025spec,
+  author    = {{Anthropic}},
+  title     = {Model Context Protocol Specification (2025-11-25)},
+  year      = {2025},
+  howpublished = {\url{https://modelcontextprotocol.io/specification/2025-11-25}},
+  note      = {MCP uses date-string versioning. Latest spec as of April 2026:
+               2025-11-25 (November 25, 2025). 110M+ monthly downloads}
+}
+
+@misc{mcp2026roadmap,
+  author    = {{MCP Core Maintainers}},
+  title     = {The 2026 {MCP} Roadmap},
+  year      = {2026},
+  howpublished = {\url{https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/}},
+  note      = {March 2026. Explicitly states: ``MCP's current spec release
+               came out in November 2025. We haven't cut a new version since''}
+}
+
+@misc{thenewstack2026mcp,
+  author    = {{The New Stack and InfoQ}},
+  title     = {{MCP} Dev Summit North America 2026},
+  year      = {2026},
+  howpublished = {\url{https://thenewstack.io}},
+  note      = {April 2--3, 2026, New York Marriott Marquis.
+               Approximately 1,200 attendees. Hosted by Linux Foundation}
+}
+
+% ============================================================
+% Agent Safety and Governance
+% ============================================================
+
+@misc{owasp2025agentic,
+  author    = {{OWASP Foundation}},
+  title     = {{OWASP} Top 10 for Agentic Applications},
+  year      = {2025},
+  howpublished = {\url{https://genai.owasp.org}},
+  note      = {Published December 9, 2025}
+}
+
+@misc{microsoft2026governance,
+  author    = {{Microsoft Open Source}},
+  title     = {Introducing the {Agent Governance Toolkit}},
+  year      = {2026},
+  howpublished = {\url{https://github.com/microsoft/agent-governance-toolkit}},
+  note      = {Open-sourced April 2, 2026. MIT licence. Covers all 10 OWASP
+               Agentic Top 10 risks. Available in Python, TypeScript, Rust,
+               Go, and .NET}
+}
+
+@misc{bvp2026security,
+  author    = {{Bessemer Venture Partners}},
+  title     = {Securing {AI} Agents: The Defining Cybersecurity Challenge of 2026},
+  year      = {2026},
+  howpublished = {\url{https://www.bvp.com/atlas}}
+}
+
+% ============================================================
+% Platform References
+% ============================================================
+
+@misc{agentverse2026docs,
+  author    = {{Fetch.ai}},
+  title     = {Agentverse Platform Documentation},
+  year      = {2026},
+  howpublished = {\url{https://agentverse.ai}},
+  note      = {Accessed April 2026}
+}
+
+@misc{uagents2026sdk,
+  author    = {{Fetch.ai}},
+  title     = {{uAgents} Framework (v0.24.2)},
+  year      = {2026},
+  howpublished = {\url{https://uagents.fetch.ai/docs}},
+  note      = {Python-only framework. v0.24.2 released April 17, 2026.
+               v0.24.1 added initial A2A adapter support}
+}
+
+% Historical reference — merger announcement (Ocean Protocol subsequently left)
+@misc{asialliance2024merger,
+  author    = {{Fetch.ai}},
+  title     = {Fetch.ai, {SingularityNET}, and {Ocean Protocol} Unite to
+               Create the {Artificial Superintelligence Alliance}},
+  year      = {2024},
+  howpublished = {\url{https://fetch.ai/blog}},
+  note      = {Token merger finalized July 15, 2024.
+               Ocean Protocol subsequently withdrew October 9, 2025}
+}
+
+@misc{ocean2025withdrawal,
+  author    = {{Ocean Protocol Foundation}},
+  title     = {The {ASI Alliance} from {Ocean}'s Perspective},
+  year      = {2025},
+  howpublished = {\url{https://blog.oceanprotocol.com}},
+  note      = {Ocean Protocol Foundation announced withdrawal effective
+               October 9--10, 2025. Subsequent litigation over 263M FET}
+}
+
+@misc{asichain2026,
+  author    = {{ASI Alliance}},
+  title     = {{ASI Chain}: {AI}-Native Blockchain Infrastructure},
+  year      = {2026},
+  howpublished = {\url{https://superintelligence.io}},
+  note      = {DevNet beta: October 2025; TestNet: Q2 2026;
+               Mainnet target: late 2026 / early 2027.
+               Based on F1R3FLY blockDAG architecture}
+}
+
+@misc{aws2025bedrock,
+  author    = {{Amazon Web Services}},
+  title     = {{Amazon Bedrock AgentCore}},
+  year      = {2025},
+  howpublished = {\url{https://aws.amazon.com/bedrock/agentcore/}},
+  note      = {Platform GA: October 13, 2025.
+               Policy component GA: March 3, 2026.
+               Evaluations component GA: March 31, 2026}
+}
+
+@misc{microsoft2025entra,
+  author    = {{Microsoft}},
+  title     = {{Microsoft Entra Agent ID}},
+  year      = {2025},
+  howpublished = {\url{https://learn.microsoft.com/en-us/entra/}},
+  note      = {First announced May 2025; public preview expanded at
+               Microsoft Ignite November 2025; governance capabilities
+               extended at RSAC 2026. Agent 365 GA May 1, 2026}
+}
+
+@misc{google2026next,
+  author    = {{Google}},
+  title     = {{Gemini Enterprise Agent Platform} ({Google Cloud Next} 2026)},
+  year      = {2026},
+  howpublished = {\url{https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26}},
+  note      = {Announced April 22, 2026. Vertex AI rebranded as Gemini
+               Enterprise Agent Platform; Agentspace absorbed into unified
+               Gemini Enterprise product}
+}
+
+@misc{fetchai2026payments,
+  author    = {{Fetch.ai}},
+  title     = {Fetch.ai Agent Payment System},
+  year      = {2026},
+  howpublished = {\url{https://fetch.ai}},
+  note      = {Includes Skyfire USDC on Base (partnership confirmed
+               BusinessWire June 26, 2025 KYAPay launch), Stripe,
+               and ASI on-chain payments}
+}
+
+% ============================================================
+% Agent Count Data
+% ============================================================
+
+@misc{kantor2026stateofagents,
+  author    = {Michael Kantor},
+  title     = {State of {AI} Agents --- {March} 2026},
+  year      = {2026},
+  howpublished = {DEV Community, \url{https://dev.to}},
+  note      = {Cross-platform snapshot, March 2026. Reports 36,338 agents
+               on AgentVerse (Fetch.ai), representing 34.8\% share of
+               catalogued agents. Fetch.ai Nov 2025 press release cited
+               2M+ agents in broader ecosystem}
+}
+
+% ============================================================
+% Economic Framing
+% ============================================================
+
+@misc{chainup2026kya,
+  author    = {{ChainUp}},
+  title     = {Know Your Agent ({KYA}): The 2026 Shift in {AI} \& Crypto},
+  year      = {2026},
+  howpublished = {\url{https://chainup.com/blog}}
+}
+
+@misc{agenticmarket2026,
+  author    = {{Coinbase / Agentic.Market}},
+  title     = {An App Store for {AI} Agents},
+  year      = {2026},
+  howpublished = {\url{https://banklesstimes.com}},
+  note      = {April 2026}
+}
+
+% ============================================================
+% Web4 and Agentic Web Framing
+% ============================================================
+
+@misc{eph4ai2026,
+  author    = {{EPH4 and WhatIsWeb4}},
+  title     = {{Web} 4.0: Agentic {AI} and the Symbiotic {Web}},
+  year      = {2026},
+  howpublished = {\url{https://eph4.ai}}
+}
+
+% ============================================================
+% Mechanism Design
+% ============================================================
+
+@misc{myerson2007mechanism,
+  author    = {Roger B. Myerson},
+  title     = {Mechanism Design},
+  year      = {2007},
+  howpublished = {Nobel Prize Lecture, Royal Swedish Academy of Sciences},
+  note      = {\url{https://www.nobelprize.org/prizes/economic-sciences/2007/}}
+}
+
+% ============================================================
+% Observability Platforms
+% ============================================================
+
+@misc{langsmith2026,
+  author    = {{LangChain}},
+  title     = {{LangSmith}: Observability for {LLM} Applications},
+  year      = {2026},
+  howpublished = {\url{https://smith.langchain.com}}
+}
+
+@misc{agentops2026,
+  author    = {{AgentOps}},
+  title     = {{AgentOps}: {AI} Agent Monitoring},
+  year      = {2026},
+  howpublished = {\url{https://agentops.ai}}
+}
+
+@misc{langfuse2026,
+  author    = {{Langfuse}},
+  title     = {Langfuse: Open-Source {LLM} Engineering Platform},
+  year      = {2026},
+  howpublished = {\url{https://langfuse.com}}
+}

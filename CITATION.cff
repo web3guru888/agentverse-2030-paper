@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: article
+title: "Infrastructure for the Agentic Web: Gap Analysis and Architecture from the Agentverse Platform"
+authors:
+  - family-names: "Dey"
+    given-names: "Robin"
+    email: "robin@openhubresearch.org"
+    affiliation: "OpenHub Research"
+  - family-names: "Viradecha"
+    given-names: "Panyanon"
+    affiliation: "OpenHub Research"
+date-released: 2026-04-24
+url: "https://github.com/web3guru888/agentverse-2030-paper"
+repository-code: "https://github.com/web3guru888/agentverse-2030-paper"
+abstract: >
+  This paper presents a systematic analysis of Agentverse, the agent cloud
+  platform developed by Fetch.ai and operated by the Artificial Superintelligence
+  (ASI) Alliance, as a case study in agent-native infrastructure. We contribute:
+  (1) a Gap Taxonomy of 52 missing capabilities across 8 categories derived from
+  an empirical audit of 204 API endpoints; (2) a seven-layer Agent Cloud Stack
+  reference architecture for 2030; and (3) five critical evolution paths from the
+  current platform to a fully realised agent cloud.
+keywords:
+  - AI agent infrastructure
+  - Agentverse
+  - ASI Alliance
+  - agent cloud
+  - agent memory
+  - A2A protocol
+  - Model Context Protocol
+  - Web4
+  - decentralised AI
+  - gap analysis
+  - reference architecture
+license: CC-BY-4.0
