@@ -249,8 +249,8 @@ Section~\ref{sec:conclusion} concludes.
 \subsection{Agent Infrastructure}
 \label{subsec:agent-infra}
 
-The theoretical foundations of agent infrastructure are established by
-\citet{chan2025infrastructure}, who identify three core functions that such
+\citet{chan2025infrastructure} establish the theoretical foundations of
+agent infrastructure, identifying three core functions that such
 infrastructure must serve: \emph{attribution} (establishing which agent, user,
 or organisation is responsible for a given action); \emph{interaction shaping}
 (protocols and systems that constrain or coordinate agent behaviour); and
@@ -270,8 +270,8 @@ term evidence supports this trajectory: \citet{kantor2026stateofagents} reports
 over 36,000 agents already registered on Agentverse as of March 2026, a figure
 that would have seemed implausible even two years prior.
 
-The economics of agent interaction are explored by \citet{hadfield2025agenteconomy},
-who model the agent economy as a labour market in which \textsc{ai} agents
+\citet{hadfield2025agenteconomy} explore the economics of agent interaction,
+modelling the agent economy as a labour market in which \textsc{ai} agents
 substitute for human workers across increasingly complex task domains.  Their
 analysis implies significant demand for infrastructure that supports agent
 \emph{hiring}, \emph{payment}, \emph{trust evaluation}, and \emph{performance
@@ -334,15 +334,20 @@ participation model that a truly interoperable agentic web requires.
 \textbf{Decentralised agent networks}---Agentverse (Fetch.ai / ASI Alliance),
 Virtuals Protocol, and ElizaOS---are built on open protocols and cryptographic
 identity, enabling permissionless agent registration and cross-platform
-interoperability.  They are closer in spirit to the internet itself (open,
-decentralised, protocol-governed) than to AWS (centralised, proprietary,
-subscription-governed).  However, they currently lack the managed service
-richness of hyperscaler platforms, which is precisely the gap this paper
-analyses.
+interoperability.\footnote{Virtuals Protocol and ElizaOS are included in this
+landscape overview for completeness.  Neither exposes a documented \textsc{rest}
+\textsc{api} surface comparable to Agentverse's, making a rigorous
+endpoint-level audit impractical.  This paper therefore focuses on Agentverse
+as the representative decentralised agent platform; a comparative study of
+all three platforms is left for future work.}  They are closer in spirit to
+the internet itself (open, decentralised, protocol-governed) than to AWS
+(centralised, proprietary, subscription-governed).  However, they currently
+lack the managed service richness of hyperscaler platforms, which is precisely
+the gap this paper analyses.
 
-Table~\ref{tab:platform-comparison} summarises the current capabilities of
-leading agent platforms along dimensions we consider essential for a production
-agent cloud.  We return to this comparison in Section~\ref{sec:discussion}.
+We compare the capabilities of these platforms along dimensions essential for
+a production agent cloud in Section~\ref{sec:discussion}
+(Table~\ref{tab:platform-comparison}).
 
 \subsection{Protocol Standards Landscape}
 \label{subsec:protocols}
@@ -492,7 +497,7 @@ autonomously \citep{fetchai2026payments}.
 
 \end{enumerate}
 
-The uAgents \textsc{sdk} (Python) provides the developer-facing abstraction:
+The uAgents \textsc{sdk} (Python) \citep{uagents2026sdk} provides the developer-facing abstraction:
 agents are defined as Python modules that respond to lifecycle events
 (\texttt{on\_event("startup")}), incoming messages
 (\texttt{@protocol.on\_message}), and \textsc{rest} requests
@@ -515,10 +520,10 @@ Our gap analysis is grounded in a systematic empirical audit of the Agentverse
 documented approximately \textbf{204 endpoints} across two \textsc{api}
 versions (\texttt{v1} and \texttt{v2}) at \url{https://agentverse.ai};
 the \textsc{api} surface is actively evolving, and endpoint availability may
-differ from this count at the time of reading.  We tested each endpoint
-category with authenticated requests using a production \textsc{api} key
-(scope: \texttt{av}), supplemented by analysis of the Fern-generated
-documentation, \textsc{sdk} source code, and community resources.
+differ from this count at the time of reading.  We tested each endpoint category with authenticated requests using a
+production \textsc{api} key (scope: \texttt{av}), supplemented by analysis of
+the Fern-generated documentation \citep{agentverse2026docs}, \textsc{sdk}
+source code, and community resources.
 
 Key findings from the audit:
 
@@ -635,7 +640,7 @@ state mechanism available to hosted agents.  It corresponds roughly to writing
 to a flat file: there is no schema, no query capability, no indexing, no size
 quota visibility, and no sharing between agents.
 
-Contemporary agent memory research \citep{mem0blog2026,zepgraphiti2025}
+Contemporary agent memory research \citep{mem0blog2026,zepgraphiti2025,yang2026graphsurvey}
 distinguishes four cognitively motivated memory types: \emph{episodic} (what
 happened, when, with whom), \emph{semantic} (facts, concepts, relationships),
 \emph{procedural} (how to do things, learned workflows), and \emph{working}
@@ -643,7 +648,8 @@ happened, when, with whom), \emph{semantic} (facts, concepts, relationships),
 hosted, authenticated services for each type.  The analogy to general-purpose
 cloud is precise: \texttt{ctx.storage} is to agent memory what writing to a
 local disk is to web application data---it works for a single instance in
-development but fails in production at scale.
+development but fails in production at scale.  Table~\ref{tab:gap-memory}
+summarises the seven gaps we identify in this category.
 
 \begin{table}[htbp]
 \centering
@@ -692,6 +698,7 @@ This stands in stark contrast to the rich observability ecosystems that have
 emerged for \textsc{llm} applications---LangSmith \citep{langsmith2026},
 AgentOps \citep{agentops2026}, and Langfuse \citep{langfuse2026}---all of
 which offer distributed tracing, token cost tracking, and behaviour analytics.
+Table~\ref{tab:gap-obs} enumerates the eight gaps in this category.
 
 \begin{table}[htbp]
 \centering
@@ -738,7 +745,8 @@ This is a significant concern given the OWASP Agentic AI Security Top 10
 hijacking, and cascading failures as the primary risk categories for autonomous
 agents.  The absence of a platform-level policy engine means that developers
 must implement all safety controls within agent code---which is both
-error-prone and inconsistent.
+error-prone and inconsistent.  Table~\ref{tab:gap-security} lists the eight
+security and governance gaps identified.
 
 \begin{table}[htbp]
 \centering
@@ -785,7 +793,8 @@ in an A2A task graph---it must use an adapter
 (\texttt{uagents-adapter[a2a-inbound/outbound]}) that translates between
 protocols.  As A2A becomes the de facto enterprise standard, this gap risks
 positioning Agentverse as an isolated ecosystem rather than a participant in
-the broader agentic web.
+the broader agentic web.  Table~\ref{tab:gap-networking} enumerates the
+eight networking and communication gaps.
 
 \begin{table}[htbp]
 \centering
@@ -826,7 +835,8 @@ projects, dependency declaration, or module imports beyond what the platform
 pre-installs.  There is no version control for deployed code, no staging
 environment, no \textsc{ci/cd} integration, and no local development
 emulator---meaning that all testing must be done against production
-infrastructure.
+infrastructure.  Table~\ref{tab:gap-dev} summarises the eight development
+and lifecycle gaps.
 
 \begin{table}[htbp]
 \centering
@@ -870,6 +880,7 @@ connecting \textsc{ai} agents to external tools.  A managed \textsc{mcp} server
 marketplace---offering agents access to web search, calendar, email, code
 execution, browser control, and database services---would dramatically expand
 the capability surface of every agent on the platform.
+Table~\ref{tab:gap-data} lists the seven data and integration service gaps.
 
 \begin{table}[htbp]
 \centering
@@ -911,7 +922,8 @@ design \citep{myerson2007mechanism}---to describe the set of basic operations
 that a functional agent economy requires: payment (exists), reputation
 (rudimentary), lending, insurance, and price discovery (all absent).  Each has
 a direct precedent in human financial systems and is tractable to implement on
-a programmable blockchain.
+a programmable blockchain.  Table~\ref{tab:gap-economy} enumerates the eight
+economic primitive gaps.
 
 \begin{table}[htbp]
 \centering
@@ -952,7 +964,8 @@ platform has not published uptime \textsc{sla}s, compliance certifications, or
 dedicated compute options.  These gaps are significant for enterprise adoption
 in regulated industries---financial services, healthcare, legal---where
 guaranteed uptime, data residency, and compliance certifications are
-prerequisites.
+prerequisites.  Table~\ref{tab:gap-enterprise} details the eight scale and
+enterprise gaps.
 
 \begin{table}[htbp]
 \centering
@@ -986,7 +999,7 @@ Regions & \medium \\
 \subsection{Summary}
 \label{subsec:gap-summary}
 
-Across the eight categories, we identify \textbf{52 distinct capability gaps}.
+Across the eight categories, we identify \textbf{62 distinct capability gaps}.
 The concentration of High-severity gaps in Categories A (Memory), C (Security),
 D (Networking), E (Development), F (Data Services), and H (Enterprise) reflects
 the platform's current positioning as a capable prototype rather than a
@@ -1011,7 +1024,8 @@ agent cloud must provide, from cryptographic identity at the substrate to
 economic exchange at the application layer.  Each layer addresses one or more
 gap categories from Section~\ref{sec:gaps}.  The layers are ordered from
 infrastructure (Layer~0) to application (Layer~6), following the convention
-of the \textsc{osi} model.
+of the \textsc{osi} model.  The complete stack is depicted in
+Figure~\ref{fig:stack}.
 
 \begin{figure}[htbp]
 \centering
@@ -1444,7 +1458,7 @@ compliance tiers for regulated industries.
 \subsection{Limitations}
 \label{subsec:limitations}
 
-Our analysis has three principal limitations.  First, it is grounded in a
+Our analysis has four principal limitations.  First, it is grounded in a
 single platform at a specific time; some gaps may not generalise to platforms
 with different architectural choices.  Second, the 2030 projections are
 conditional on current trajectories and could be materially altered by
@@ -1452,6 +1466,13 @@ technical breakthroughs or regulatory intervention.  Third, the economic
 primitives in Sections~\ref{subsec:layer6} and~\ref{subsec:path-economy} are
 proposed without formal analysis of their incentive properties; rigorous
 mechanism design treatment of each would require dedicated theoretical work.
+Fourth, the empirical audit is categorical rather than quantitative: we
+characterise endpoints as operational, partially deployed, or absent, but do
+not report \textsc{api} response-time distributions, storage throughput
+benchmarks, or Almanac search quality metrics.  Future work should conduct
+controlled performance experiments to complement this taxonomy with
+quantitative empirical data, which would materially strengthen the
+contribution for submission to a peer-reviewed venue.
 
 % =============================================================================
 \section{Conclusion}
@@ -1460,7 +1481,7 @@ mechanism design treatment of each would require dedicated theoretical work.
 
 We have presented a systematic analysis of the Agentverse platform as a case
 study in agent-native cloud infrastructure.  Our empirical audit of 204 \textsc{api} endpoints (as documented in Q1~2026)
-reveals 52 capability gaps across eight
+reveals 62 capability gaps across eight
 categories---from agent memory and observability to security, communication,
 data services, economic primitives, and enterprise-grade scaling.  These gaps
 are not failures of vision but the natural condition of pioneering
