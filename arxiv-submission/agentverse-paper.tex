@@ -483,7 +483,7 @@ agent-to-agent communication without requiring both parties to be simultaneously
 active.
 
 \item \textbf{ASI:One}: A unified \textsc{llm} \textsc{api} available via an
-OpenAI-compatible endpoint (\texttt{api.asi1.ai/v1}).  The primary model,
+OpenAI-compatible endpoint (\texttt{api.asi1.\allowbreak{}ai/v1}).  The primary model,
 \texttt{asi1}, is a unified model that automatically adapts its capabilities
 based on the request---activating agentic reasoning, extended analysis, fast
 inference, tool calling, or knowledge-graph traversal as needed.  A
@@ -498,20 +498,19 @@ autonomously \citep{fetchai2026payments}.
 
 \end{enumerate}
 
-The uAgents \textsc{sdk} (Python) \citep{uagents2026sdk} provides the developer-facing abstraction:
-agents are defined as Python modules that respond to lifecycle events
-(\texttt{on\_event("startup")}), incoming messages
-(\texttt{@protocol.on\_message}), and \textsc{rest} requests
-(\texttt{@agent.on\_rest\_get}, \texttt{@agent.on\_rest\_post}).  Persistent
-state is available via \texttt{ctx.storage} (a key-value store).
+The uAgents \textsc{sdk} (Python) \citep{uagents2026sdk} provides the
+developer-facing abstraction: agents respond to lifecycle events,
+incoming messages, and \textsc{rest} requests via decorated handlers
+(\texttt{on\_event}, \texttt{on\_message}, \texttt{on\_rest\_get/post}).
+Persistent state is available via \texttt{ctx.storage} (a key-value store).
 Agent-to-agent communication uses the Agent Chat Protocol with typed message
 schemas.
 
-An \textsc{mcp} integration layer is available at two endpoints---a full
-endpoint (\texttt{mcp.agentverse.ai/sse}) and a lightweight one
-(\texttt{mcp-lite.agentverse.ai/mcp})---exposing
-platform capabilities to \textsc{mcp}-compatible clients such as Claude
-Desktop and FetchCoder.
+An \textsc{mcp} integration layer is available at two endpoints: a full
+server (\texttt{mcp.agentverse.\allowbreak{}ai/sse}) and a lightweight one
+(\texttt{mcp-lite.\allowbreak{}agentverse.ai/mcp}), exposing platform
+capabilities to \textsc{mcp}-compatible clients such as Claude Desktop
+and FetchCoder.
 
 \subsection{API Audit Methodology}
 \label{subsec:audit}
@@ -557,10 +556,7 @@ no structured query capability, no indexing, and no size visibility.
 \item Secrets management is account-scoped (not per-agent), creating security
 isolation concerns for multi-agent deployments.
 
-\item Log retrieval is polling-only via
-\texttt{GET~\allowbreak{}/v1/hosting/\allowbreak{}agents/\{address\}/\allowbreak{}logs/latest}; there is no
-streaming, no historical log retention beyond a rolling window, and no log
-search.
+\item Log retrieval is polling-only (\texttt{GET /v1/hosting/agents/\{addr\}/}\allowbreak\texttt{logs/latest}); there is no streaming, no historical log retention beyond a rolling window, and no log search.
 
 \end{itemize}
 
@@ -740,23 +736,23 @@ summarises the seven gaps we identify in this category.
 \centering
 \caption{Category A gaps: Agent Memory and State}
 \label{tab:gap-memory}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No vector store & No embedding-based semantic similarity search & OpenSearch /
-Pinecone & \high \\[4pt]
+Pinecone & \high \\
 No knowledge graph & No relationship-structured fact storage with temporal
-validity & Neptune / Neo4j & \high \\[4pt]
+validity & Neptune / Neo4j & \high \\
 No episodic memory & No conversation history with temporal indexing & DynamoDB
-with \textsc{ttl} & \high \\[4pt]
+with \textsc{ttl} & \high \\
 No shared memory spaces & No permissioned shared context between cooperating
-agents & ElastiCache & \high \\[4pt]
+agents & ElastiCache & \high \\
 No memory \textsc{mcp} servers & No per-agent authenticated \textsc{mcp}
-endpoints for memory access & --- & \high \\[4pt]
+endpoints for memory access & --- & \high \\
 \texttt{ctx.storage} opacity & No visible quota, no overflow handling & --- &
-\medium \\[4pt]
+\medium \\
 No procedural memory & No storage for learned workflows / tool usage patterns &
 Step Functions state & \medium \\
 \bottomrule
@@ -789,25 +785,25 @@ Table~\ref{tab:gap-obs} enumerates the eight gaps in this category.
 \centering
 \caption{Category B gaps: Agent Observability}
 \label{tab:gap-obs}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No distributed tracing & No OpenTelemetry-compatible trace of execution paths &
-CloudWatch X-Ray & \high \\[4pt]
+CloudWatch X-Ray & \high \\
 No cost tracking & No per-agent \textsc{llm} token usage or compute cost
-visibility & Cost Explorer & \high \\[4pt]
+visibility & Cost Explorer & \high \\
 No streaming logs & Logs available only via polling, not streaming & CloudWatch
-Logs Insights & \high \\[4pt]
+Logs Insights & \high \\
 No historical log retention & Rolling window only; no searchable history & S3
-log archival & \medium \\[4pt]
+log archival & \medium \\
 No performance metrics & No latency, throughput, or error rate dashboards &
-CloudWatch Metrics & \medium \\[4pt]
+CloudWatch Metrics & \medium \\
 No behaviour analytics & No aggregate view of agent actions across interactions
-& Application Insights & \medium \\[4pt]
+& Application Insights & \medium \\
 No A/B testing framework & No infrastructure for comparing agent behaviour
-variants & Evidently & \low \\[4pt]
+variants & Evidently & \low \\
 No anomaly detection & No alerts on unexpected agent behaviour patterns &
 CloudWatch Anomaly & \medium \\
 \bottomrule
@@ -837,25 +833,25 @@ security and governance gaps identified.
 \centering
 \caption{Category C gaps: Agent Security and Governance}
 \label{tab:gap-security}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No capability permissions & Agents have undifferentiated access to all
-\textsc{api}s & \textsc{iam} least-privilege & \high \\[4pt]
+\textsc{api}s & \textsc{iam} least-privilege & \high \\
 No sandbox isolation & No Wasm or container-level isolation between agents &
-Firecracker microVMs & \high \\[4pt]
+Firecracker microVMs & \high \\
 No per-agent secrets & Secrets are account-scoped, not agent-scoped & Secrets
-Manager & \high \\[4pt]
+Manager & \high \\
 No policy engine & No declarative rules constraining agent actions & Org
-\textsc{scp}s & \high \\[4pt]
+\textsc{scp}s & \high \\
 No content filtering & No input/output guardrails for harmful content & Bedrock
-Guardrails & \high \\[4pt]
+Guardrails & \high \\
 No audit trail & No immutable record of agent actions beyond rolling logs &
-CloudTrail & \medium \\[4pt]
+CloudTrail & \medium \\
 No rate limiting per agent & Rate limits apply at account level only & \textsc{api}
-Gateway plans & \medium \\[4pt]
+Gateway plans & \medium \\
 No action attribution & No cryptographic proof linking action to agent & --- &
 \medium \\
 \bottomrule
@@ -885,25 +881,25 @@ eight networking and communication gaps.
 \centering
 \caption{Category D gaps: Agent Networking and Communication}
 \label{tab:gap-networking}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No native A2A support & Cannot natively participate in A2A task graphs & --- &
-\high \\[4pt]
+\high \\
 No pub/sub event bus & No broadcast coordination between multiple agents &
-\textsc{sns} / EventBridge & \high \\[4pt]
+\textsc{sns} / EventBridge & \high \\
 No streaming messages & Request-response only; no \textsc{sse} or WebSocket &
-\textsc{api} Gateway WS & \high \\[4pt]
+\textsc{api} Gateway WS & \high \\
 No group coordination & No consensus, voting, or delegation primitives & ---
-(novel) & \medium \\[4pt]
+(novel) & \medium \\
 No service mesh & No load balancing across agent replicas & App Mesh &
-\medium \\[4pt]
+\medium \\
 No push / webhooks & No push notification to external systems & EventBridge &
-\medium \\[4pt]
+\medium \\
 No human escalation & No standardised path for agent to request human input &
---- & \medium \\[4pt]
+--- & \medium \\
 No workflow orchestration & No native sequential/parallel agent task graph &
 Step Functions & \high \\
 \bottomrule
@@ -927,25 +923,25 @@ and lifecycle gaps.
 \centering
 \caption{Category E gaps: Agent Development and Lifecycle}
 \label{tab:gap-dev}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 Single-file paradigm & No multi-file project support & Lambda deployment pkgs &
-\high \\[4pt]
+\high \\
 No code versioning & No history of deployed code versions & CodeCommit /
-GitHub & \high \\[4pt]
+GitHub & \high \\
 No staging environment & No pre-production test environment & Lambda aliases &
-\high \\[4pt]
+\high \\
 No local emulator & Cannot run hosted agent locally & \textsc{sam cli} &
-\high \\[4pt]
+\high \\
 No \textsc{ci/cd} integration & No webhook-triggered deploy pipeline &
-CodePipeline & \medium \\[4pt]
+CodePipeline & \medium \\
 No dependency declaration & Pip packages limited to pre-installed set & Lambda
-layers & \high \\[4pt]
+layers & \high \\
 No testing framework & No unit or integration test harness for agents & --- &
-\medium \\[4pt]
+\medium \\
 No agent templates & No scaffolding beyond basic examples & \textsc{sam} init &
 \low \\
 \bottomrule
@@ -971,21 +967,21 @@ Table~\ref{tab:gap-data} lists the seven data and integration service gaps.
 \centering
 \caption{Category F gaps: Data and Integration Services}
 \label{tab:gap-data}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No hosted database & No \textsc{sql} or NoSQL managed database per agent &
-\textsc{rds} / DynamoDB & \high \\[4pt]
-No object storage & No file / blob storage for agent assets & S3 & \high \\[4pt]
-No caching service & No in-memory cache for hot data & ElastiCache & \medium \\[4pt]
+\textsc{rds} / DynamoDB & \high \\
+No object storage & No file / blob storage for agent assets & S3 & \high \\
+No caching service & No in-memory cache for hot data & ElastiCache & \medium \\
 No \textsc{mcp} Server Hub & No marketplace of authenticated \textsc{mcp}
-servers & \textsc{aws} Marketplace & \high \\[4pt]
+servers & \textsc{aws} Marketplace & \high \\
 No \textsc{api} gateway & No controlled proxy for external \textsc{api} access &
-\textsc{api} Gateway & \medium \\[4pt]
+\textsc{api} Gateway & \medium \\
 No task queue & No job queue for deferred or scheduled tasks & \textsc{sqs} &
-\medium \\[4pt]
+\medium \\
 No data pipeline & No \textsc{etl} / streaming ingestion for agent data &
 Kinesis / Glue & \low \\
 \bottomrule
@@ -1014,25 +1010,25 @@ economic primitive gaps.
 \centering
 \caption{Category G gaps: Agent Economic Primitives}
 \label{tab:gap-economy}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Precedent} &
 \textbf{Severity} \\
 \midrule
 No multi-dim.\ reputation & Single star rating only & eBay / Stripe Risk &
-\high \\[4pt]
+\high \\
 No \textsc{sla} enforcement & No smart-contract-backed service guarantees & ---
-& \high \\[4pt]
+& \high \\
 No revenue analytics & No earnings and transaction history dashboard & Stripe
-Dashboard & \high \\[4pt]
+Dashboard & \high \\
 No automated pricing & No dynamic pricing based on demand or capability & Spot
-Instances & \medium \\[4pt]
+Instances & \medium \\
 No resource lending & No borrowing of compute against future revenue & DeFi
-lending & \low \\[4pt]
+lending & \low \\
 No agent insurance & No risk pooling for agent failures or errors & Lloyd's
-syndicates & \low \\[4pt]
+syndicates & \low \\
 No dispute resolution & No arbitration for failed service delivery & eBay
-Resolution & \medium \\[4pt]
+Resolution & \medium \\
 No KYA framework & No ``Know Your Agent'' compliance registry & KYC / AML &
 \medium \\
 \bottomrule
@@ -1056,25 +1052,25 @@ enterprise gaps.
 \centering
 \caption{Category H gaps: Scale and Enterprise}
 \label{tab:gap-enterprise}
-\begin{tabular}{p{3.2cm} p{5.5cm} p{2.9cm} l}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{2.9cm} l}
 \toprule
 \textbf{Gap} & \textbf{Description} & \textbf{Cloud Analogue} &
 \textbf{Severity} \\
 \midrule
 No horizontal scaling & Single instance per agent; no auto-scaling &
-\textsc{ecs} / Kubernetes & \high \\[4pt]
+\textsc{ecs} / Kubernetes & \high \\
 No multi-region & Single deployment region only & \textsc{aws} multi-region &
-\high \\[4pt]
+\high \\
 No private networking & All communication via public infrastructure & \textsc{vpc}
-/ PrivateLink & \medium \\[4pt]
+/ PrivateLink & \medium \\
 No \textsc{sso} / enterprise \textsc{iam} & No \textsc{saml}, \textsc{oidc}, or
-\textsc{scim} integration & Cognito / Okta & \high \\[4pt]
+\textsc{scim} integration & Cognito / Okta & \high \\
 No published uptime \textsc{sla} & No contractual uptime guarantee & \textsc{aws sla} &
-\high \\[4pt]
+\high \\
 No compliance certifications & No SOC~2, ISO 27001, HIPAA & \textsc{aws}
-Compliance & \high \\[4pt]
+Compliance & \high \\
 No dedicated compute & No reserved or dedicated execution tier & Reserved
-Instances & \medium \\[4pt]
+Instances & \medium \\
 No data residency & No control over geographic data placement & \textsc{aws}
 Regions & \medium \\
 \bottomrule
@@ -1452,49 +1448,193 @@ is beginning to organise around exactly these needs.
 \begin{table}[htbp]
 \centering
 \caption{Comparative capabilities of agent platforms, 2026 vs.\ projected 2030.
-$\bigstar\bigstar\bigstar\bigstar\bigstar$ = excellent;
-$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$ = minimal.}
+Cell colour: \textcolor{green!60!black}{$\blacksquare$}~excellent,
+             \textcolor{green!40!black}{$\blacksquare$}~good,
+             \textcolor{orange!70!black}{$\blacksquare$}~moderate,
+             \textcolor{orange!90!black}{$\blacksquare$}~limited,
+             \textcolor{red!70!black}{$\blacksquare$}~minimal.
+Last column (Agentverse 2030) separated by thicker rule.}
 \label{tab:platform-comparison}
-\footnotesize
-\begin{tabular}{p{2.1cm}p{2.1cm}p{2.1cm}p{2.1cm}p{2.1cm}|p{2.2cm}}
-\toprule
-\textbf{Dimension} &
-\textbf{Agentverse} &
-\textbf{AWS Bedrock} &
-\textbf{Azure} &
-\textbf{Google} &
-\textbf{Agentverse} \\
-& \textbf{2026} & \textbf{AgentCore} & \textbf{AI Foundry} &
-\textbf{Gemini Ent.} & \textbf{2030} \\
-\midrule
-Compute & Hosted Python, single-instance & Serverless, managed &
-Managed, scalable & Managed, scalable & Wasm, multi-lang, auto-scale \\
-Identity & Crypto keys & AWS IAM & Entra Agent ID & Google IAM &
-DIDs + VCs \\
-Memory & \texttt{ctx.storage} & S3/DynamoDB & Cosmos DB & Firestore &
-Memory Cloud (4-tier) \\
-Communication & Chat Protocol & REST/Bedrock API & REST/A2A & A2A/REST &
-Multi-protocol gateway \\
-Discovery & Almanac & Bedrock Registry & Copilot Studio & Agentspace &
-Semantic Agent DNS \\
-Observability & Log polling & CloudWatch/X-Ray & Azure Monitor &
-Cloud Trace & OTel + cost dashboards \\
-Security & Account-level & IAM/VPC/KMS & Entra + Azure Sec &
-Google IAM + VPC & Capability-based, Wasm \\
-Payments & ASI + Stripe + USDC & AWS Billing & Azure Credits & GCP Billing &
-Agent econ.\ primitives \\
-Decentralisation & $\bigstar\bigstar\bigstar\bigstar\bigstar$ &
-$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$ &
-$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$ &
-$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$ &
-$\bigstar\bigstar\bigstar\bigstar\bigstar$ \\
-Enterprise & $\bigstar\bigstar\bigcirc\bigcirc\bigcirc$ &
-$\bigstar\bigstar\bigstar\bigstar\bigstar$ &
-$\bigstar\bigstar\bigstar\bigstar\bigstar$ &
-$\bigstar\bigstar\bigstar\bigstar\bigcirc$ &
-$\bigstar\bigstar\bigstar\bigstar\bigcirc$ \\
-\bottomrule
-\end{tabular}
+\begin{tikzpicture}[
+  font=\scriptsize,
+  lbl/.style={anchor=center, text width=2.65cm, align=left,
+              font=\scriptsize\bfseries, inner sep=0pt, outer sep=0pt},
+  hdr/.style={anchor=center, text width=1.73cm, align=center,
+              font=\scriptsize\bfseries, inner sep=0pt, outer sep=0pt},
+  dsc/.style={anchor=center, text width=1.73cm, align=center,
+              inner sep=0pt, outer sep=0pt}
+]
+
+%% ---- Header ----
+\fill[gray!6!white] (0,11.000cm) rectangle (2.800cm,12.100cm);
+\fill[gray!18!white] (2.800cm,11.000cm) rectangle (12.200cm,12.100cm);
+\node[lbl] at (1.400cm,11.550cm) {\textbf{Dimension}};
+\node[hdr] at (3.740cm,11.550cm) {{Agentverse\\2026}};
+\node[hdr] at (5.620cm,11.550cm) {{AWS Bedrock}};
+\node[hdr] at (7.500cm,11.550cm) {{Azure AI\\Foundry}};
+\node[hdr] at (9.380cm,11.550cm) {{Google\\Gemini Ent.}};
+\node[hdr] at (11.260cm,11.550cm) {{Agentverse\\2030}};
+
+%% Row 1: Compute
+\fill[gray!6!white] (0,9.900cm) rectangle (2.800cm,11.000cm);
+\fill[orange!22!white] (2.800cm,9.900cm) rectangle (4.680cm,11.000cm);
+\fill[green!15!white] (4.680cm,9.900cm) rectangle (6.560cm,11.000cm);
+\fill[green!15!white] (6.560cm,9.900cm) rectangle (8.440cm,11.000cm);
+\fill[green!15!white] (8.440cm,9.900cm) rectangle (10.320cm,11.000cm);
+\fill[green!30!white] (10.320cm,9.900cm) rectangle (12.200cm,11.000cm);
+\node[lbl] at (1.400cm,10.450cm) {Compute};
+\node[dsc] at (3.740cm,10.450cm) {Hosted Python};
+\node[dsc] at (5.620cm,10.450cm) {Serverless, managed};
+\node[dsc] at (7.500cm,10.450cm) {Managed, scalable};
+\node[dsc] at (9.380cm,10.450cm) {Managed, scalable};
+\node[dsc] at (11.260cm,10.450cm) {Wasm, multi-lang};
+
+%% Row 2: Identity
+\fill[gray!6!white] (0,8.800cm) rectangle (2.800cm,9.900cm);
+\fill[green!30!white] (2.800cm,8.800cm) rectangle (4.680cm,9.900cm);
+\fill[orange!22!white] (4.680cm,8.800cm) rectangle (6.560cm,9.900cm);
+\fill[orange!22!white] (6.560cm,8.800cm) rectangle (8.440cm,9.900cm);
+\fill[orange!22!white] (8.440cm,8.800cm) rectangle (10.320cm,9.900cm);
+\fill[green!30!white] (10.320cm,8.800cm) rectangle (12.200cm,9.900cm);
+\node[lbl] at (1.400cm,9.350cm) {Identity};
+\node[dsc] at (3.740cm,9.350cm) {Crypto keys};
+\node[dsc] at (5.620cm,9.350cm) {AWS IAM};
+\node[dsc] at (7.500cm,9.350cm) {Entra Agent ID};
+\node[dsc] at (9.380cm,9.350cm) {Google IAM};
+\node[dsc] at (11.260cm,9.350cm) {DIDs + VCs};
+
+%% Row 3: Memory
+\fill[gray!6!white] (0,7.700cm) rectangle (2.800cm,8.800cm);
+\fill[red!22!white] (2.800cm,7.700cm) rectangle (4.680cm,8.800cm);
+\fill[green!30!white] (4.680cm,7.700cm) rectangle (6.560cm,8.800cm);
+\fill[green!30!white] (6.560cm,7.700cm) rectangle (8.440cm,8.800cm);
+\fill[green!30!white] (8.440cm,7.700cm) rectangle (10.320cm,8.800cm);
+\fill[green!30!white] (10.320cm,7.700cm) rectangle (12.200cm,8.800cm);
+\node[lbl] at (1.400cm,8.250cm) {Memory};
+\node[dsc] at (3.740cm,8.250cm) {ctx.storage};
+\node[dsc] at (5.620cm,8.250cm) {S3 + DynamoDB};
+\node[dsc] at (7.500cm,8.250cm) {Cosmos DB};
+\node[dsc] at (9.380cm,8.250cm) {Firestore};
+\node[dsc] at (11.260cm,8.250cm) {Memory Cloud (4-tier)};
+
+%% Row 4: Communication
+\fill[gray!6!white] (0,6.600cm) rectangle (2.800cm,7.700cm);
+\fill[yellow!25!white] (2.800cm,6.600cm) rectangle (4.680cm,7.700cm);
+\fill[yellow!25!white] (4.680cm,6.600cm) rectangle (6.560cm,7.700cm);
+\fill[green!15!white] (6.560cm,6.600cm) rectangle (8.440cm,7.700cm);
+\fill[green!15!white] (8.440cm,6.600cm) rectangle (10.320cm,7.700cm);
+\fill[green!30!white] (10.320cm,6.600cm) rectangle (12.200cm,7.700cm);
+\node[lbl] at (1.400cm,7.150cm) {Communication};
+\node[dsc] at (3.740cm,7.150cm) {Chat Protocol};
+\node[dsc] at (5.620cm,7.150cm) {REST, Bedrock API};
+\node[dsc] at (7.500cm,7.150cm) {REST, A2A};
+\node[dsc] at (9.380cm,7.150cm) {A2A, REST};
+\node[dsc] at (11.260cm,7.150cm) {Multi-protocol gateway};
+
+%% Row 5: Discovery
+\fill[gray!6!white] (0,5.500cm) rectangle (2.800cm,6.600cm);
+\fill[yellow!25!white] (2.800cm,5.500cm) rectangle (4.680cm,6.600cm);
+\fill[yellow!25!white] (4.680cm,5.500cm) rectangle (6.560cm,6.600cm);
+\fill[yellow!25!white] (6.560cm,5.500cm) rectangle (8.440cm,6.600cm);
+\fill[green!15!white] (8.440cm,5.500cm) rectangle (10.320cm,6.600cm);
+\fill[green!30!white] (10.320cm,5.500cm) rectangle (12.200cm,6.600cm);
+\node[lbl] at (1.400cm,6.050cm) {Discovery};
+\node[dsc] at (3.740cm,6.050cm) {Almanac};
+\node[dsc] at (5.620cm,6.050cm) {Bedrock Registry};
+\node[dsc] at (7.500cm,6.050cm) {Copilot Studio};
+\node[dsc] at (9.380cm,6.050cm) {Agentspace};
+\node[dsc] at (11.260cm,6.050cm) {Semantic Agent DNS};
+
+%% Row 6: Observability
+\fill[gray!6!white] (0,4.400cm) rectangle (2.800cm,5.500cm);
+\fill[red!22!white] (2.800cm,4.400cm) rectangle (4.680cm,5.500cm);
+\fill[green!30!white] (4.680cm,4.400cm) rectangle (6.560cm,5.500cm);
+\fill[green!30!white] (6.560cm,4.400cm) rectangle (8.440cm,5.500cm);
+\fill[green!30!white] (8.440cm,4.400cm) rectangle (10.320cm,5.500cm);
+\fill[green!30!white] (10.320cm,4.400cm) rectangle (12.200cm,5.500cm);
+\node[lbl] at (1.400cm,4.950cm) {Observability};
+\node[dsc] at (3.740cm,4.950cm) {Log polling};
+\node[dsc] at (5.620cm,4.950cm) {CloudWatch, X-Ray};
+\node[dsc] at (7.500cm,4.950cm) {Azure Monitor};
+\node[dsc] at (9.380cm,4.950cm) {Cloud Trace};
+\node[dsc] at (11.260cm,4.950cm) {OTel + cost dashboards};
+
+%% Row 7: Security
+\fill[gray!6!white] (0,3.300cm) rectangle (2.800cm,4.400cm);
+\fill[orange!22!white] (2.800cm,3.300cm) rectangle (4.680cm,4.400cm);
+\fill[green!30!white] (4.680cm,3.300cm) rectangle (6.560cm,4.400cm);
+\fill[green!30!white] (6.560cm,3.300cm) rectangle (8.440cm,4.400cm);
+\fill[green!30!white] (8.440cm,3.300cm) rectangle (10.320cm,4.400cm);
+\fill[green!30!white] (10.320cm,3.300cm) rectangle (12.200cm,4.400cm);
+\node[lbl] at (1.400cm,3.850cm) {Security};
+\node[dsc] at (3.740cm,3.850cm) {Account-level};
+\node[dsc] at (5.620cm,3.850cm) {IAM, VPC, KMS};
+\node[dsc] at (7.500cm,3.850cm) {Entra + Azure Sec.};
+\node[dsc] at (9.380cm,3.850cm) {Google IAM + VPC};
+\node[dsc] at (11.260cm,3.850cm) {Capability-based, Wasm};
+
+%% Row 8: Payments
+\fill[gray!6!white] (0,2.200cm) rectangle (2.800cm,3.300cm);
+\fill[green!30!white] (2.800cm,2.200cm) rectangle (4.680cm,3.300cm);
+\fill[red!22!white] (4.680cm,2.200cm) rectangle (6.560cm,3.300cm);
+\fill[red!22!white] (6.560cm,2.200cm) rectangle (8.440cm,3.300cm);
+\fill[red!22!white] (8.440cm,2.200cm) rectangle (10.320cm,3.300cm);
+\fill[green!30!white] (10.320cm,2.200cm) rectangle (12.200cm,3.300cm);
+\node[lbl] at (1.400cm,2.750cm) {Payments};
+\node[dsc] at (3.740cm,2.750cm) {ASI + Stripe + USDC};
+\node[dsc] at (5.620cm,2.750cm) {AWS Billing};
+\node[dsc] at (7.500cm,2.750cm) {Azure Credits};
+\node[dsc] at (9.380cm,2.750cm) {GCP Billing};
+\node[dsc] at (11.260cm,2.750cm) {Econ. primitives};
+
+%% Row 9: Decentralisation
+\fill[gray!6!white] (0,1.100cm) rectangle (2.800cm,2.200cm);
+\fill[green!30!white] (2.800cm,1.100cm) rectangle (4.680cm,2.200cm);
+\fill[red!22!white] (4.680cm,1.100cm) rectangle (6.560cm,2.200cm);
+\fill[red!22!white] (6.560cm,1.100cm) rectangle (8.440cm,2.200cm);
+\fill[red!22!white] (8.440cm,1.100cm) rectangle (10.320cm,2.200cm);
+\fill[green!30!white] (10.320cm,1.100cm) rectangle (12.200cm,2.200cm);
+\node[lbl] at (1.400cm,1.650cm) {Decentralisation};
+\node[dsc] at (3.740cm,1.650cm) {$\bigstar\bigstar\bigstar\bigstar\bigstar$};
+\node[dsc] at (5.620cm,1.650cm) {$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$};
+\node[dsc] at (7.500cm,1.650cm) {$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$};
+\node[dsc] at (9.380cm,1.650cm) {$\bigstar\bigcirc\bigcirc\bigcirc\bigcirc$};
+\node[dsc] at (11.260cm,1.650cm) {$\bigstar\bigstar\bigstar\bigstar\bigstar$};
+
+%% Row 10: Enterprise
+\fill[gray!6!white] (0,0.000cm) rectangle (2.800cm,1.100cm);
+\fill[orange!22!white] (2.800cm,0.000cm) rectangle (4.680cm,1.100cm);
+\fill[green!30!white] (4.680cm,0.000cm) rectangle (6.560cm,1.100cm);
+\fill[green!30!white] (6.560cm,0.000cm) rectangle (8.440cm,1.100cm);
+\fill[green!15!white] (8.440cm,0.000cm) rectangle (10.320cm,1.100cm);
+\fill[green!15!white] (10.320cm,0.000cm) rectangle (12.200cm,1.100cm);
+\node[lbl] at (1.400cm,0.550cm) {Enterprise};
+\node[dsc] at (3.740cm,0.550cm) {$\bigstar\bigstar\bigcirc\bigcirc\bigcirc$};
+\node[dsc] at (5.620cm,0.550cm) {$\bigstar\bigstar\bigstar\bigstar\bigstar$};
+\node[dsc] at (7.500cm,0.550cm) {$\bigstar\bigstar\bigstar\bigstar\bigstar$};
+\node[dsc] at (9.380cm,0.550cm) {$\bigstar\bigstar\bigstar\bigstar\bigcirc$};
+\node[dsc] at (11.260cm,0.550cm) {$\bigstar\bigstar\bigstar\bigstar\bigcirc$};
+
+%% ---- Grid ----
+\draw[black!55, line width=0.65pt] (0,0) rectangle (12.200cm,12.100cm);
+\draw[black!55, line width=0.55pt] (0,11.000cm) -- (12.200cm,11.000cm);
+\draw[black!22, line width=0.3pt] (0,9.900cm) -- (12.200cm,9.900cm);
+\draw[black!22, line width=0.3pt] (0,8.800cm) -- (12.200cm,8.800cm);
+\draw[black!22, line width=0.3pt] (0,7.700cm) -- (12.200cm,7.700cm);
+\draw[black!22, line width=0.3pt] (0,6.600cm) -- (12.200cm,6.600cm);
+\draw[black!22, line width=0.3pt] (0,5.500cm) -- (12.200cm,5.500cm);
+\draw[black!22, line width=0.3pt] (0,4.400cm) -- (12.200cm,4.400cm);
+\draw[black!22, line width=0.3pt] (0,3.300cm) -- (12.200cm,3.300cm);
+\draw[black!22, line width=0.3pt] (0,2.200cm) -- (12.200cm,2.200cm);
+\draw[black!22, line width=0.3pt] (0,1.100cm) -- (12.200cm,1.100cm);
+\draw[black!55, line width=0.5pt] (2.800cm,0) -- (2.800cm,12.100cm);
+\draw[black!22, line width=0.3pt] (4.680cm,0) -- (4.680cm,12.100cm);
+\draw[black!22, line width=0.3pt] (6.560cm,0) -- (6.560cm,12.100cm);
+\draw[black!22, line width=0.3pt] (8.440cm,0) -- (8.440cm,12.100cm);
+\draw[black!22, line width=0.3pt] (10.320cm,0) -- (10.320cm,12.100cm);
+\draw[black!50, line width=0.5pt] (10.320cm,0) -- (10.320cm,12.100cm);
+
+\end{tikzpicture}
 \end{table}
 
 Table~\ref{tab:platform-comparison} reveals a structural complementarity:
