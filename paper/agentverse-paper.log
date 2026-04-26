@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.4.26)  26 APR 2026 03:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.4.26)  26 APR 2026 04:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,25 +342,294 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\pgf@xd=\dimen182
+\pgf@yd=\dimen183
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count289
+\c@pgf@countb=\count290
+\c@pgf@countc=\count291
+\c@pgf@countd=\count292
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count293
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count294
+\pgfsyssoftpath@bigbuffer@items=\count295
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count296
+\pgfmath@box=\box55
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count297
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen259
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen263
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen264
+\pgf@sys@shading@range@num=\count299
+\pgf@shadingcount=\count300
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box59
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box60
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count301
+\pgfplotmarksize=\dimen269
+)
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count302
+\tikznumberofchildren=\count303
+\tikznumberofcurrentchild=\count304
+\tikz@fig@count=\count305
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count306
+\pgfmatrixcurrentcolumn=\count307
+\pgf@matrix@numberofcolumns=\count308
+)
+\tikz@expandcount=\count309
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count289
-\lst@gtempboxa=\box54
-\lst@token=\toks29
-\lst@length=\count290
-\lst@currlwidth=\dimen172
-\lst@column=\count291
-\lst@pos=\count292
-\lst@lostspace=\dimen173
-\lst@width=\dimen174
-\lst@newlines=\count293
-\lst@lineno=\count294
-\lst@maxwidth=\dimen175
+\lst@mode=\count310
+\lst@gtempboxa=\box65
+\lst@token=\toks41
+\lst@length=\count311
+\lst@currlwidth=\dimen278
+\lst@column=\count312
+\lst@pos=\count313
+\lst@lostspace=\dimen279
+\lst@width=\dimen280
+\lst@newlines=\count314
+\lst@lineno=\count315
+\lst@maxwidth=\dimen281
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count295
-\lst@skipnumbers=\count296
-\lst@framebox=\box55
+\c@lstnumber=\count316
+\lst@skipnumbers=\count317
+\lst@framebox=\box66
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -372,17 +641,17 @@ Package: microtype 2021/12/10 v3.0b Micro-typographical refinements (RS)
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
+\etb@tempcnta=\count318
 )
-\MT@toks=\toks30
-\MT@count=\count298
-\MT@tempbox=\box56
+\MT@toks=\toks42
+\MT@count=\count319
+\MT@tempbox=\box67
 LaTeX Info: Redefining \leftprotrusion on input line 1010.
 LaTeX Info: Redefining \rightprotrusion on input line 1018.
 LaTeX Info: Redefining \textls on input line 1173.
-\MT@outer@kern=\dimen176
+\MT@outer@kern=\dimen282
 LaTeX Info: Redefining \textmicrotypecontext on input line 1759.
-\MT@listname@count=\count299
+\MT@listname@count=\count320
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2021/12/10 v3.0b Definitions specific to pdftex (RS)
@@ -404,13 +673,13 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen177
-\captionmargin@=\dimen178
-\captionwidth=\dimen179
-\caption@tempdima=\dimen180
-\caption@indent=\dimen181
-\caption@parindent=\dimen182
-\caption@hangindent=\dimen183
+\captionmargin=\dimen283
+\captionmargin@=\dimen284
+\captionwidth=\dimen285
+\caption@tempdima=\dimen286
+\caption@indent=\dimen287
+\caption@parindent=\dimen288
+\caption@hangindent=\dimen289
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
@@ -424,23 +693,23 @@ Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count300
-\c@continuedfloat=\count301
+\c@caption@flags=\count321
+\c@continuedfloat=\count322
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count302
-\c@subtable=\count303
+\c@subfigure=\count323
+\c@subtable=\count324
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip67
-\enit@outerparindent=\dimen184
-\enit@toks=\toks31
-\enit@inbox=\box57
-\enit@count@id=\count304
-\enitdp@description=\count305
+\enit@outerparindent=\dimen290
+\enit@toks=\toks43
+\enit@inbox=\box68
+\enit@count@id=\count325
+\enitdp@description=\count326
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
@@ -448,18 +717,18 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip69
 \LTpre=\skip70
 \LTpost=\skip71
-\LTchunksize=\count306
-\LTcapwidth=\dimen185
-\LT@head=\box58
-\LT@firsthead=\box59
-\LT@foot=\box60
-\LT@lastfoot=\box61
-\LT@gbox=\box62
-\LT@cols=\count307
-\LT@rows=\count308
-\c@LT@tables=\count309
-\c@LT@chunks=\count310
-\LT@p@ftn=\toks32
+\LTchunksize=\count327
+\LTcapwidth=\dimen291
+\LT@head=\box69
+\LT@firsthead=\box70
+\LT@foot=\box71
+\LT@lastfoot=\box72
+\LT@gbox=\box73
+\LT@cols=\count328
+\LT@rows=\count329
+\c@LT@tables=\count330
+\c@LT@chunks=\count331
+\LT@p@ftn=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
@@ -469,48 +738,48 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count311
-\l__pdf_internal_box=\box63
+\l__color_backend_stack_int=\count332
+\l__pdf_internal_box=\box74
 )
 (./agentverse-paper.aux)
 \openout1 = `agentverse-paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count312
-\scratchdimen=\dimen186
-\scratchbox=\box64
-\nofMPsegments=\count313
-\nofMParguments=\count314
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count315
-\MPscratchDim=\dimen187
-\MPnumerator=\count316
-\makeMPintoPDFobject=\count317
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count333
+\scratchdimen=\dimen292
+\scratchbox=\box75
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen293
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -520,7 +789,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 108.
+Package hyperref Info: Link coloring ON on input line 109.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -531,25 +800,25 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count318
+\c@section@level=\count339
 )
-LaTeX Info: Redefining \ref on input line 108.
-LaTeX Info: Redefining \pageref on input line 108.
-LaTeX Info: Redefining \nameref on input line 108.
+LaTeX Info: Redefining \ref on input line 109.
+LaTeX Info: Redefining \pageref on input line 109.
+LaTeX Info: Redefining \nameref on input line 109.
 
 (./agentverse-paper.out) (./agentverse-paper.out)
-\@outlinefile=\write3
-\openout3 = `agentverse-paper.out'.
+\@outlinefile=\write4
+\openout4 = `agentverse-paper.out'.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 108.
-\c@lstlisting=\count319
-LaTeX Info: Redefining \microtypecontext on input line 108.
-Package microtype Info: Applying patch `item' on input line 108.
-Package microtype Info: Applying patch `toc' on input line 108.
-Package microtype Info: Applying patch `eqnum' on input line 108.
-Package microtype Info: Applying patch `footnote' on input line 108.
+(lastpage)             ! on input line 109.
+\c@lstlisting=\count340
+LaTeX Info: Redefining \microtypecontext on input line 109.
+Package microtype Info: Applying patch `item' on input line 109.
+Package microtype Info: Applying patch `toc' on input line 109.
+Package microtype Info: Applying patch `eqnum' on input line 109.
+Package microtype Info: Applying patch `footnote' on input line 109.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -573,7 +842,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -582,7 +851,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -601,26 +870,26 @@ Underfull \vbox (badness 7777) has occurred while \output is active []
  [4]
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 358.
+(Font)              using `OT1/cmr/bx/n' instead on input line 359.
 
 [5]
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
  [6]
-Overfull \hbox (25.69112pt too wide) in paragraph at lines 484--492
+Overfull \hbox (25.69112pt too wide) in paragraph at lines 485--493
 []\OT1/cmr/bx/n/10.95 ASI:One\OT1/cmr/m/n/10.95 : A uni-fied \OT1/cmr/m/sc/10.9
 5 llm api \OT1/cmr/m/n/10.95 avail-able via an OpenAI-compatible end-point (\OT
 1/cmtt/m/n/10.95 api.asi1.ai/v1\OT1/cmr/m/n/10.95 ).
  []
 
 
-Overfull \hbox (8.48674pt too wide) in paragraph at lines 500--508
+Overfull \hbox (8.48674pt too wide) in paragraph at lines 501--509
 \OT1/cmr/m/n/10.95 agents are de-fined as Python mod-ules that re-spond to life
 -cy-cle events (\OT1/cmtt/m/n/10.95 on[]event("startup")\OT1/cmr/m/n/10.95 ),
  []
 
 
-Overfull \hbox (26.33856pt too wide) in paragraph at lines 509--514
+Overfull \hbox (26.33856pt too wide) in paragraph at lines 510--515
 []\OT1/cmr/m/n/10.95 An \OT1/cmr/m/sc/10.95 mcp \OT1/cmr/m/n/10.95 in-te-gra-ti
 on layer is avail-able at two endpoints---a full end-point (\OT1/cmtt/m/n/10.95
  mcp.agentverse.ai/sse\OT1/cmr/m/n/10.95 )
@@ -628,32 +897,32 @@ on layer is avail-able at two endpoints---a full end-point (\OT1/cmtt/m/n/10.95
 
 [7]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 549.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 550.
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-553.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 553.
+554.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 554.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 553.
+(Font)              for symbol `textbraceleft' on input line 554.
 
 
-Overfull \hbox (1.4033pt too wide) in paragraph at lines 552--555
+Overfull \hbox (1.4033pt too wide) in paragraph at lines 553--556
 []\OT1/cmr/m/n/10.95 Storage is lim-ited to a key-value in-ter-face (\OT1/cmtt/
 m/n/10.95 ctx.storage\OT1/cmr/m/n/10.95 ) ac-ces-si-ble via \OT1/cmtt/m/n/10.95
  GET /v1/hosting/
  []
 
 
-Overfull \hbox (7.42885pt too wide) in paragraph at lines 559--563
+Overfull \hbox (7.42885pt too wide) in paragraph at lines 560--564
 []\OT1/cmr/m/n/10.95 Log re-trieval is polling-only via \OT1/cmtt/m/n/10.95 GET
  /v1/hosting/agents/\OMS/cmtt/m/n/10.95 f\OT1/cmtt/m/n/10.95 address\OMS/cmtt/m
 /n/10.95 g\OT1/cmtt/m/n/10.95 /logs/latest\OT1/cmr/m/n/10.95 ; there
  []
 
 
-Overfull \hbox (0.72252pt too wide) in paragraph at lines 586--591
+Overfull \hbox (0.72252pt too wide) in paragraph at lines 587--592
 []\OT1/cmr/bx/sc/10.95 Latency. \OT1/cmr/m/n/10.95 We is-sued $\OML/cmm/m/it/10
 .95 n[]\OT1/cmr/m/n/10.95 10$ con-sec-u-tive au-then-ti-cated re-quests to each
  end-point and recorded
@@ -663,47 +932,47 @@ Overfull \hbox (0.72252pt too wide) in paragraph at lines 586--591
 Underfull \vbox (badness 1715) has occurred while \output is active []
 
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 744--744
+Underfull \hbox (badness 10000) in paragraph at lines 745--745
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 747--747
+Underfull \hbox (badness 3189) in paragraph at lines 748--748
 []|\OT1/cmr/m/n/10.95 No embedding-based se-man-tic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
 []|\OT1/cmr/m/n/10.95 OpenSearch /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 749--749
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
 []|\OT1/cmr/m/n/10.95 No knowl-edge
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 749--750
+Underfull \hbox (badness 1371) in paragraph at lines 750--751
 []|\OT1/cmr/m/n/10.95 No relationship-structured fact
  []
 
 
-Underfull \hbox (badness 3492) in paragraph at lines 751--751
+Underfull \hbox (badness 3492) in paragraph at lines 752--752
 []|\OT1/cmr/m/n/10.95 No con-ver-sa-tion his-tory with
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 755--755
+Underfull \hbox (badness 2368) in paragraph at lines 756--756
 []|\OT1/cmr/m/n/10.95 No mem-ory \OT1/cmr/m/sc/10.95 mcp
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 760--760
 []|\OT1/cmr/m/n/10.95 No pro-ce-du-ral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--760
+Underfull \hbox (badness 10000) in paragraph at lines 761--761
 []|\OT1/cmr/m/n/10.95 Step Func-tions
  []
 
@@ -711,157 +980,157 @@ Underfull \hbox (badness 10000) in paragraph at lines 760--760
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 794--794
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-[]|\OT1/cmr/m/n/10.95 No dis-tributed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-[]|\OT1/cmr/m/n/10.95 No OpenTelemetry-compatible
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 797--797
+[]|\OT1/cmr/m/n/10.95 No dis-tributed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--797
+[]|\OT1/cmr/m/n/10.95 No OpenTelemetry-compatible
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 798--798
 []|\OT1/cmr/m/n/10.95 CloudWatch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--801
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 []|\OT1/cmr/m/n/10.95 CloudWatch
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 804--804
-[]|\OT1/cmr/m/n/10.95 No per-for-mance
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 805--805
-[]|\OT1/cmr/m/n/10.95 CloudWatch
+[]|\OT1/cmr/m/n/10.95 No per-for-mance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--807
-[]|\OT1/cmr/m/n/10.95 Application In-
+Underfull \hbox (badness 10000) in paragraph at lines 806--806
+[]|\OT1/cmr/m/n/10.95 CloudWatch
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 808--808
+[]|\OT1/cmr/m/n/10.95 Application In-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
 []|\OT1/cmr/m/n/10.95 No A/B test-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--811
+Underfull \hbox (badness 10000) in paragraph at lines 812--812
 []|\OT1/cmr/m/n/10.95 CloudWatch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--841
+Underfull \hbox (badness 10000) in paragraph at lines 842--842
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--845
+Underfull \hbox (badness 10000) in paragraph at lines 846--846
 []|\OT1/cmr/m/sc/10.95 iam \OT1/cmr/m/n/10.95 least-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--847
+Underfull \hbox (badness 10000) in paragraph at lines 848--848
 []|\OT1/cmr/m/n/10.95 Firecracker mi-
  []
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 848--848
+Underfull \hbox (badness 5637) in paragraph at lines 849--849
 []|\OT1/cmr/m/n/10.95 No per-agent se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 852--853
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 []|\OT1/cmr/m/n/10.95 Bedrock
  []
 
 
-Underfull \hbox (badness 5711) in paragraph at lines 856--856
+Underfull \hbox (badness 5711) in paragraph at lines 857--857
 []|\OT1/cmr/m/n/10.95 No rate lim-it-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 []|\OT1/cmr/m/sc/10.95 api \OT1/cmr/m/n/10.95 Gate-way
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
+Underfull \hbox (badness 10000) in paragraph at lines 890--890
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 894--894
+Underfull \hbox (badness 1189) in paragraph at lines 895--895
 []|\OT1/cmr/m/n/10.95 No broad-cast co-or-di-na-tion be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--895
+Underfull \hbox (badness 10000) in paragraph at lines 896--896
 []|\OT1/cmr/m/sc/10.95 sns \OT1/cmr/m/n/10.95 / Event-
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 902--902
+Underfull \hbox (badness 3536) in paragraph at lines 903--903
 []|\OT1/cmr/m/n/10.95 No push / web-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--906
+Underfull \hbox (badness 10000) in paragraph at lines 907--907
 []|\OT1/cmr/m/n/10.95 No work-flow or-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--906
+Underfull \hbox (badness 10000) in paragraph at lines 907--907
 []|\OT1/cmr/m/n/10.95 No na-tive se-quen-tial/-par-al-lel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--931
+Underfull \hbox (badness 10000) in paragraph at lines 932--932
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 934--934
+Underfull \hbox (badness 10000) in paragraph at lines 935--935
 []|\OT1/cmr/m/n/10.95 Single-file
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 934--934
+Underfull \hbox (badness 5460) in paragraph at lines 935--935
 []|\OT1/cmr/m/n/10.95 Lambda de-ploy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 937--938
 []|\OT1/cmr/m/n/10.95 CodeCommit /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 942--942
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
 []|\OT1/cmr/m/n/10.95 No webhook-triggered de-ploy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 944--944
+Underfull \hbox (badness 10000) in paragraph at lines 945--945
 []|\OT1/cmr/m/n/10.95 No de-pen-dency
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 944--944
+Underfull \hbox (badness 3386) in paragraph at lines 945--945
 []|\OT1/cmr/m/n/10.95 Pip pack-ages lim-ited to pre-
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 946--946
+Underfull \hbox (badness 1412) in paragraph at lines 947--947
 []|\OT1/cmr/m/n/10.95 No test-ing frame-
  []
 
@@ -870,68 +1139,68 @@ Underfull \vbox (badness 2359) has occurred while \output is active []
 
  [13]
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 975--975
+Underfull \hbox (badness 10000) in paragraph at lines 976--976
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 978--978
+Underfull \hbox (badness 10000) in paragraph at lines 979--979
 []|\OT1/cmr/m/n/10.95 No hosted
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 978--978
+Underfull \hbox (badness 3179) in paragraph at lines 979--979
 []|\OT1/cmr/m/n/10.95 No \OT1/cmr/m/sc/10.95 sql \OT1/cmr/m/n/10.95 or NoSQL ma
 n-aged
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 979--979
+Underfull \hbox (badness 10000) in paragraph at lines 980--980
 []|\OT1/cmr/m/sc/10.95 rds \OT1/cmr/m/n/10.95 / Dy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--982
+Underfull \hbox (badness 10000) in paragraph at lines 983--983
 []|\OT1/cmr/m/n/10.95 No \OT1/cmr/m/sc/10.95 mcp \OT1/cmr/m/n/10.95 Server
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 986--986
+Underfull \hbox (badness 1152) in paragraph at lines 987--987
 []|\OT1/cmr/m/n/10.95 No job queue for de-ferred or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1022
 []|\OT1/cmr/m/n/10.95 eBay / Stripe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
 []|\OT1/cmr/m/n/10.95 No \OT1/cmr/m/sc/10.95 sla \OT1/cmr/m/n/10.95 en-force-
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 1023--1023
+Underfull \hbox (badness 5189) in paragraph at lines 1024--1024
 []|\OT1/cmr/m/n/10.95 No smart-contract-backed ser-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
 []|\OT1/cmr/m/n/10.95 Stripe Dash-
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 1029--1029
+Underfull \hbox (badness 1552) in paragraph at lines 1030--1030
 []|\OT1/cmr/m/n/10.95 No re-source lend-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1032
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
 []|\OT1/cmr/m/n/10.95 Lloyd's syn-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1035--1035
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
 []|\OT1/cmr/m/n/10.95 No KYA frame-
  []
 
@@ -939,130 +1208,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 1035--1035
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1061
 []|\OT1/cmr/bx/sc/10.95 Cloud Ana-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1063--1063
+Underfull \hbox (badness 1107) in paragraph at lines 1064--1064
 []|\OT1/cmr/m/n/10.95 Single in-stance per agent; no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1068
 []|\OT1/cmr/m/n/10.95 No pri-vate net-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1068
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
 []|\OT1/cmr/m/sc/10.95 vpc \OT1/cmr/m/n/10.95 / Pri-
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 1071--1071
+Underfull \hbox (badness 2302) in paragraph at lines 1072--1072
 []|\OT1/cmr/m/n/10.95 No pub-lished up-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
 []|\OT1/cmr/m/n/10.95 Reserved In-
  []
 
 [16]
-Overfull \hbox (0.91347pt too wide) in paragraph at lines 1166--1171
+\agstackrcw=\skip72
+
+Overfull \hbox (0.6pt too wide) in paragraph at lines 1158--1162
+ [][] 
+ []
+
+
+Overfull \hbox (0.91347pt too wide) in paragraph at lines 1187--1192
 \OT1/cmr/bx/sc/10.95 Sandboxed ex-e-cu-tion. \OT1/cmr/m/n/10.95 Agent code shou
 ld run in We-bAssem-bly sand-boxes with capability-
  []
 
-[17] [18] [19] [20] [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[17]
+Underfull \vbox (badness 1418) has occurred while \output is active []
 
- [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1442--1442
+ [18]
+[19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1463
 []|\OT1/cmr/bx/n/9 AWS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1449
+Underfull \hbox (badness 10000) in paragraph at lines 1470--1470
 []|\OT1/cmr/m/n/9 Hosted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1449
+Underfull \hbox (badness 10000) in paragraph at lines 1470--1470
 []|\OT1/cmr/m/n/9 Serverless,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1450--1451
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1472
 []|\OT1/cmr/m/n/9 Wasm, multi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1472
 []|\OT1/cmr/m/n/9 Entra Agent
  []
 
 
-Overfull \hbox (2.2986pt too wide) in paragraph at lines 1453--1453
+Overfull \hbox (2.2986pt too wide) in paragraph at lines 1474--1474
 []|\OT1/cmr/m/n/9 S3/DynamoDB| 
  []
 
 
-Overfull \hbox (4.2278pt too wide) in paragraph at lines 1455--1455
+Overfull \hbox (4.2278pt too wide) in paragraph at lines 1476--1476
 []|\OT1/cmr/m/n/9 Communication| 
  []
 
 
-Overfull \hbox (2.59628pt too wide) in paragraph at lines 1455--1455
+Overfull \hbox (2.59628pt too wide) in paragraph at lines 1476--1476
 []|\OT1/cmr/m/n/9 REST/Bedrock
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1477--1478
 []|\OT1/cmr/m/n/9 Multi-protocol
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 1457--1457
+Underfull \hbox (badness 7631) in paragraph at lines 1478--1478
 []|\OT1/cmr/m/n/9 Bedrock Reg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1459
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
 []|\OT1/cmr/m/n/9 Semantic
  []
 
 
-Overfull \hbox (3.45108pt too wide) in paragraph at lines 1459--1459
+Overfull \hbox (3.45108pt too wide) in paragraph at lines 1480--1480
 []|\OT1/cmr/m/n/9 CloudWatch/X-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1482
 []|\OT1/cmr/m/n/9 OTel + cost
  []
 
 
-Overfull \hbox (8.9721pt too wide) in paragraph at lines 1461--1461
+Overfull \hbox (8.9721pt too wide) in paragraph at lines 1482--1482
 []|\OT1/cmr/m/n/9 IAM/VPC/KMS| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1483--1484
 []|\OT1/cmr/m/n/9 Capability-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1464--1465
+Underfull \hbox (badness 10000) in paragraph at lines 1485--1486
 []|\OT1/cmr/m/n/9 Agent econ.
  []
 
 
-Overfull \hbox (5.71942pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (5.71942pt too wide) in paragraph at lines 1486--1486
 []|\OT1/cmr/m/n/9 Decentralisation| 
  []
 
-[23] [24] [25] (./agentverse-paper.bbl
+
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 1571) has occurred while \output is active []
+
+ [23]
+[24] (./agentverse-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 21--26
 []\OT1/cmr/m/n/10.95 Anthropic.  Model con-text pro-to-col spec-i-fi-ca-tion (2
 025-11-25).  [][]$\OT1/cmtt/m/n/10.95 https : / /
@@ -1080,13 +1364,13 @@ Underfull \hbox (badness 6110) in paragraph at lines 28--33
 uc-ture.  [][]$\OT1/cmtt/m/n/10.95 https : / /
  []
 
-[26]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 100--107
 \OT1/cmtt/m/n/10.95 google . com / blog / topics / google-[]cloud-[]next / welc
 ome-[]to-[]google-[]cloud-[]next26$[][]\OT1/cmr/m/n/10.95 ,
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 150--155
 []\OT1/cmr/m/n/10.95 Mem0.  State of AI agent mem-ory 2026.  [][]$\OT1/cmtt/m/n
 /10.95 https : / / mem0 . ai / blog /
@@ -1102,13 +1386,13 @@ Package rerunfilecheck Info: File `agentverse-paper.out' has not changed.
 (rerunfilecheck)             Checksum: 6B32458F26750A0BCCC081EBAB03B9C5;10092.
  ) 
 Here is how much of TeX's memory you used:
- 16574 strings out of 480247
- 262468 string characters out of 5896151
- 897789 words of memory out of 5000000
- 34142 multiletter control sequences out of 15000+600000
+ 26340 strings out of 480247
+ 481401 string characters out of 5896151
+ 791733 words of memory out of 5000000
+ 43722 multiletter control sequences out of 15000+600000
  482397 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 85i,11n,90p,1013b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,11n,90p,1013b,752s stack positions out of 5000i,500n,10000p,200000b,80000s
  </root/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </
 root/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
@@ -1126,10 +1410,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on agentverse-paper.pdf (28 pages, 326341 bytes).
+Output written on agentverse-paper.pdf (28 pages, 323308 bytes).
 PDF statistics:
- 721 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
- 13665 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 626 compressed objects within 7 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 13677 words of extra memory for PDF output out of 14400 (max. 10000000)
 

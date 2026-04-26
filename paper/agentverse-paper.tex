@@ -23,6 +23,7 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{xcolor}
+\usepackage{tikz}
 \usepackage{listings}
 \PassOptionsToPackage{expansion=false}{microtype}
 \usepackage{microtype}
@@ -1113,32 +1114,52 @@ Figure~\ref{fig:stack}.
 
 \begin{figure}[htbp]
 \centering
-\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small, xleftmargin=1em]
-+----------------------------------------------------------+
-| Layer 6: Economy      -- Marketplace, reputation, KYA,  |
-|                          economic primitives             |
-+----------------------------------------------------------+
-| Layer 5: Observability -- Tracing, cost dashboards,     |
-|                           guardrail eval, sim env        |
-+----------------------------------------------------------+
-| Layer 4: Services     -- AgentDB, AgentStore,           |
-|                          AgentCache, AgentMCP Hub        |
-+----------------------------------------------------------+
-| Layer 3: Communication -- Multi-protocol gateway        |
-|                           (Chat + A2A + MCP), event bus  |
-+----------------------------------------------------------+
-| Layer 2: Memory       -- Episodic, Semantic, Procedural,|
-|                          Working, Shared (all via MCP)   |
-+----------------------------------------------------------+
-| Layer 1: Runtime      -- Wasm sandbox, capability-based |
-|                          security, auto-scaling          |
-+----------------------------------------------------------+
-| Layer 0: Substrate    -- ASI Chain, DIDs, VCs, TEEs     |
-+----------------------------------------------------------+
-\end{lstlisting}
-\caption{The Seven-Layer Agent Cloud Stack.  Layer~0 provides the
-decentralised trust substrate; Layers 1--6 add progressively higher-level
-services, each closing specific gaps identified in Section~\ref{sec:gaps}.}
+% Right-column text width: \linewidth minus left column (3.8cm) minus padding (0.3cm)
+\newlength{\agstackrcw}%
+\setlength{\agstackrcw}{\linewidth}%
+\addtolength{\agstackrcw}{-4.1cm}%
+\begin{tikzpicture}[
+  font=\small,
+  lbl/.style={anchor=west, text width=3.55cm, align=left,
+              font=\small\bfseries, inner sep=0pt, outer sep=0pt},
+  dsc/.style={anchor=west, text width=\agstackrcw, align=left,
+              inner sep=0pt, outer sep=0pt}
+]
+%% Layer fills (bottom = Layer 0, top = Layer 6)
+\fill[blue!16!white]   (0,0.00cm) rectangle (\linewidth,1.15cm); % L0 Substrate
+\fill[green!13!white]  (0,1.15cm) rectangle (\linewidth,2.30cm); % L1 Runtime
+\fill[cyan!11!white]   (0,2.30cm) rectangle (\linewidth,3.45cm); % L2 Memory
+\fill[teal!11!white]   (0,3.45cm) rectangle (\linewidth,4.60cm); % L3 Communication
+\fill[yellow!18!white] (0,4.60cm) rectangle (\linewidth,5.75cm); % L4 Services
+\fill[orange!14!white] (0,5.75cm) rectangle (\linewidth,6.90cm); % L5 Observability
+\fill[violet!13!white] (0,6.90cm) rectangle (\linewidth,8.05cm); % L6 Economy
+%% Horizontal dividers between layers
+\foreach \y in {1.15cm,2.30cm,3.45cm,4.60cm,5.75cm,6.90cm}{%
+  \draw[black!30,line width=0.35pt] (0,\y) -- (\linewidth,\y);}
+%% Outer border
+\draw[black!55,line width=0.6pt] (0,0cm) rectangle (\linewidth,8.05cm);
+%% Vertical divider (left-column / right-column)
+\draw[black!30,line width=0.35pt] (3.8cm,0cm) -- (3.8cm,8.05cm);
+%% Layer labels (left column) and descriptions (right column)
+\node[lbl] at (0.15cm,0.575cm)  {Layer 0:\\Substrate};
+\node[dsc] at (3.95cm,0.575cm)  {ASI Chain, DIDs, Verifiable Credentials, TEEs};
+\node[lbl] at (0.15cm,1.725cm)  {Layer 1:\\Runtime};
+\node[dsc] at (3.95cm,1.725cm)  {Wasm sandbox, capability-based security, auto-scaling};
+\node[lbl] at (0.15cm,2.875cm)  {Layer 2:\\Memory};
+\node[dsc] at (3.95cm,2.875cm)  {Episodic, Semantic, Procedural, Working, Shared (via MCP)};
+\node[lbl] at (0.15cm,4.025cm)  {Layer 3:\\Communication};
+\node[dsc] at (3.95cm,4.025cm)  {Multi-protocol gateway (Chat $+$ A2A $+$ MCP), event bus};
+\node[lbl] at (0.15cm,5.175cm)  {Layer 4:\\Services};
+\node[dsc] at (3.95cm,5.175cm)  {AgentDB, AgentStore, AgentCache, AgentMCP Hub};
+\node[lbl] at (0.15cm,6.325cm)  {Layer 5:\\Observability};
+\node[dsc] at (3.95cm,6.325cm)  {Tracing, cost dashboards, guardrail eval, sim env};
+\node[lbl] at (0.15cm,7.475cm)  {Layer 6:\\Economy};
+\node[dsc] at (3.95cm,7.475cm)  {Marketplace, reputation, KYA, economic primitives};
+\end{tikzpicture}
+\caption{The Seven-Layer Agent Cloud Stack (read bottom to top).  Layer~0
+provides the decentralised trust substrate; Layers~1--6 add progressively
+higher-level services, each closing specific gaps identified in
+Section~\ref{sec:gaps}.}
 \label{fig:stack}
 \end{figure}
 
