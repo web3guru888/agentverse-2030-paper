@@ -85,7 +85,7 @@
 \newcommand{\low}{\textcolor{green!50!black}{\textbf{Low}}}
 
 % -- JMLR heading macros ------------------------------------------------------
-\jmlrheading{1}{2026}{1-\pageref{LastPage}}{4/26}{}{}{Dey and Viradecha}
+\jmlrheading{1}{2026}{1-\pageref{LastPage}}{}{}{}{Dey and Viradecha}
 \ShortHeadings{Infrastructure for the Agentic Web}{Dey and Viradecha}
 \firstpageno{1}
 
@@ -125,9 +125,9 @@ represents one of the most mature and complete production deployments of
 agent-native infrastructure available today.
 
 We make three principal contributions.  First, we conduct a rigorous empirical
-audit of the Agentverse platform, cataloguing its 204 documented \textsc{api}
-endpoints and characterising what is operational, what is partially deployed,
-and what remains absent.  From this audit we derive a structured \textbf{Gap
+audit of the Agentverse platform, cataloguing 204 \textsc{api} endpoints
+as documented at the time of writing (Q1~2026) and characterising what is
+operational, what is partially deployed, and what remains absent.  From this audit we derive a structured \textbf{Gap
 Taxonomy}---eight categories encompassing approximately fifty missing
 infrastructure capabilities, ranging from agent memory and observability to
 security, economic primitives, and enterprise-grade scaling.  Second, we
@@ -170,16 +170,17 @@ coordination into the web's fabric.  Each transition was enabled not primarily
 by new \emph{applications} but by new \emph{infrastructure}: foundational
 platforms that made a previously impractical class of systems tractable.
 
-We are now at the beginning of a fourth such transition.  Web4, variously
-termed the \emph{agentic web} or the \emph{symbiotic web}
-\citep{eph4ai2026}, is characterised by the presence of autonomous \textsc{ai}
-agents as primary actors on the internet---software entities that perceive
-their environment, reason about goals, execute multi-step plans, communicate
-with other agents, and transact economically, all without requiring human
-intervention at each step.  The transition from Web3 to Web4 parallels in
-important respects the transition from Web1 to Web2: the applications (agents)
-already exist in prototype form, but the infrastructure required to operate
-them reliably, safely, and at scale remains nascent.
+We are now at the beginning of a fourth such transition.  What some authors
+term Web4 or the \emph{agentic web} \citep{eph4ai2026}---also variously
+called the \emph{symbiotic web}---is characterised by the presence of
+autonomous \textsc{ai} agents as primary actors on the internet: software
+entities that perceive their environment, reason about goals, execute
+multi-step plans, communicate with other agents, and transact economically,
+all without requiring human intervention at each step.  The transition from
+Web3 to this agentic era parallels in important respects the transition from
+Web1 to Web2: the applications (agents) already exist in prototype form, but
+the infrastructure required to operate them reliably, safely, and at scale
+remains nascent.
 
 \citet{chan2025infrastructure} articulate the concept of \emph{agent
 infrastructure}---``technical systems and shared protocols external to agents
@@ -213,15 +214,20 @@ forthcoming ASI Chain), giving it architectural properties---open identity,
 permissionless participation, cryptographic trust---that hyperscaler agent
 offerings \citep{aws2025bedrock,microsoft2025entra,google2026next} do not
 share.  And crucially, it is a production system with real registered agents
-(over 36,000 in the Almanac as of Q1 2026 \citep{kantor2026stateofagents}),
+(over 36,000 in the Almanac as of Q1 2026
+\citep{kantor2026stateofagents}\footnote{The Agentverse search \textsc{api}
+caps results at 10,000 entries; the 36,000-plus figure is sourced from
+\citeauthor{kantor2026stateofagents}'s cross-platform registry aggregation,
+which queries the Almanac directly rather than through the search interface.}),
 real developer communities, and real \textsc{api} endpoints that can be
 empirically tested.
 
-Our investigation proceeds from a hands-on audit of all 204 documented
-Agentverse \textsc{api} endpoints, supplemented by analysis of the uAgents
-\textsc{sdk}, the ASI:One \textsc{llm} \textsc{api}, and the platform's
-\textsc{mcp} integration layer.  From this empirical foundation we derive our
-gap taxonomy, architecture, and evolution paths.
+Our investigation proceeds from a hands-on audit of 204 documented
+Agentverse \textsc{api} endpoints as catalogued at the time of writing
+(Q1~2026), supplemented by analysis of the uAgents \textsc{sdk}, the
+ASI:One \textsc{llm} \textsc{api}, and the platform's \textsc{mcp}
+integration layer.  From this empirical foundation we derive our gap
+taxonomy, architecture, and evolution paths.
 
 The remainder of the paper is structured as follows.
 Section~\ref{sec:background} surveys related work on agent infrastructure,
@@ -243,8 +249,8 @@ Section~\ref{sec:conclusion} concludes.
 \subsection{Agent Infrastructure}
 \label{subsec:agent-infra}
 
-The theoretical foundations of agent infrastructure are established by
-\citet{chan2025infrastructure}, who identify three core functions that such
+\citet{chan2025infrastructure} establish the theoretical foundations of
+agent infrastructure, identifying three core functions that such
 infrastructure must serve: \emph{attribution} (establishing which agent, user,
 or organisation is responsible for a given action); \emph{interaction shaping}
 (protocols and systems that constrain or coordinate agent behaviour); and
@@ -264,8 +270,8 @@ term evidence supports this trajectory: \citet{kantor2026stateofagents} reports
 over 36,000 agents already registered on Agentverse as of March 2026, a figure
 that would have seemed implausible even two years prior.
 
-The economics of agent interaction are explored by \citet{hadfield2025agenteconomy},
-who model the agent economy as a labour market in which \textsc{ai} agents
+\citet{hadfield2025agenteconomy} explore the economics of agent interaction,
+modelling the agent economy as a labour market in which \textsc{ai} agents
 substitute for human workers across increasingly complex task domains.  Their
 analysis implies significant demand for infrastructure that supports agent
 \emph{hiring}, \emph{payment}, \emph{trust evaluation}, and \emph{performance
@@ -286,10 +292,12 @@ that create lasting competitive advantage are those that solve the hard
 operational problems developers face \emph{after} they have compute---
 authentication, persistence, observability, scaling, and compliance.
 
-We observe that Agentverse in 2026 is approximately at the AWS 2006 stage: it
-has primitive compute (hosted agents), a registry (Almanac), and messaging
-(mailbox).  The gap between this and a mature agent cloud platform is analogous
-to the gap between AWS in 2006 and AWS today.
+We observe that Agentverse in 2026 occupies a position analogous to AWS in
+2006: it has established the essential primitives---compute (hosted agents),
+a registry (Almanac), and messaging (mailbox)---on which the full agent cloud
+can be built.  Just as AWS expanded from three core services in 2006 to over
+200 today, the trajectory from Agentverse's current foundation to a mature
+agent cloud platform is both ambitious and well-defined.
 
 The cloud computing literature establishes a layered abstraction model:
 \textsc{iaas} $\to$ \textsc{paas} $\to$ \textsc{saas} $\to$ \textsc{faas}.
@@ -326,15 +334,20 @@ participation model that a truly interoperable agentic web requires.
 \textbf{Decentralised agent networks}---Agentverse (Fetch.ai / ASI Alliance),
 Virtuals Protocol, and ElizaOS---are built on open protocols and cryptographic
 identity, enabling permissionless agent registration and cross-platform
-interoperability.  They are closer in spirit to the internet itself (open,
-decentralised, protocol-governed) than to AWS (centralised, proprietary,
-subscription-governed).  However, they currently lack the managed service
-richness of hyperscaler platforms, which is precisely the gap this paper
-analyses.
+interoperability.\footnote{Virtuals Protocol and ElizaOS are included in this
+landscape overview for completeness.  Neither exposes a documented \textsc{rest}
+\textsc{api} surface comparable to Agentverse's, making a rigorous
+endpoint-level audit impractical.  This paper therefore focuses on Agentverse
+as the representative decentralised agent platform; a comparative study of
+all three platforms is left for future work.}  They are closer in spirit to
+the internet itself (open, decentralised, protocol-governed) than to AWS
+(centralised, proprietary, subscription-governed).  However, they currently
+lack the managed service richness of hyperscaler platforms, which is precisely
+the gap this paper analyses.
 
-Table~\ref{tab:platform-comparison} summarises the current capabilities of
-leading agent platforms along dimensions we consider essential for a production
-agent cloud.  We return to this comparison in Section~\ref{sec:discussion}.
+We compare the capabilities of these platforms along dimensions essential for
+a production agent cloud in Section~\ref{sec:discussion}
+(Table~\ref{tab:platform-comparison}).
 
 \subsection{Protocol Standards Landscape}
 \label{subsec:protocols}
@@ -468,13 +481,14 @@ messages for agents that are temporarily offline, enabling reliable
 agent-to-agent communication without requiring both parties to be simultaneously
 active.
 
-\item \textbf{ASI:One}: A multi-model \textsc{llm} \textsc{api} offering seven
-seven models via an OpenAI-compatible endpoint (\texttt{api.asi1.ai}):
-\texttt{asi1}, \texttt{asi1-fast}, \texttt{asi1-extended},
-\texttt{asi1-graph}, \texttt{asi1-agentic}, \texttt{asi1-fast-agentic},
-and \texttt{asi1-extended-agentic}.  The \textsc{api} additionally supports real-time web
-search, structured output with \textsc{json} schema, image generation, and
-streaming.
+\item \textbf{ASI:One}: A unified \textsc{llm} \textsc{api} available via an
+OpenAI-compatible endpoint (\texttt{api.asi1.ai/v1}).  The primary model,
+\texttt{asi1}, is a unified model that automatically adapts its capabilities
+based on the request---activating agentic reasoning, extended analysis, fast
+inference, tool calling, or knowledge-graph traversal as needed.  A
+lightweight variant, \texttt{asi1-mini}, is available for resource-constrained
+applications.  The \textsc{api} additionally supports real-time web search,
+structured output with \textsc{json} schema, image generation, and streaming.
 
 \item \textbf{Payment Protocol}: A built-in buyer-seller protocol supporting
 Stripe (fiat), Skyfire \textsc{usdc}, and \textsc{fet}/\textsc{asi} on-chain
@@ -483,7 +497,7 @@ autonomously \citep{fetchai2026payments}.
 
 \end{enumerate}
 
-The uAgents \textsc{sdk} (Python) provides the developer-facing abstraction:
+The uAgents \textsc{sdk} (Python) \citep{uagents2026sdk} provides the developer-facing abstraction:
 agents are defined as Python modules that respond to lifecycle events
 (\texttt{on\_event("startup")}), incoming messages
 (\texttt{@protocol.on\_message}), and \textsc{rest} requests
@@ -502,12 +516,14 @@ Desktop and FetchCoder.
 \label{subsec:audit}
 
 Our gap analysis is grounded in a systematic empirical audit of the Agentverse
-\textsc{api} surface.  The platform exposes approximately \textbf{204
-documented endpoints} across two \textsc{api} versions (\texttt{v1} and
-\texttt{v2}) at \url{https://agentverse.ai}.  We tested each endpoint category
-with authenticated requests using a production \textsc{api} key (scope:
-\texttt{av}), supplemented by analysis of the Fern-generated documentation,
-\textsc{sdk} source code, and community resources.
+\textsc{api} surface.  At the time of our audit (Q1~2026), the platform
+documented approximately \textbf{204 endpoints} across two \textsc{api}
+versions (\texttt{v1} and \texttt{v2}) at \url{https://agentverse.ai};
+the \textsc{api} surface is actively evolving, and endpoint availability may
+differ from this count at the time of reading.  We tested each endpoint category with authenticated requests using a
+production \textsc{api} key (scope: \texttt{av}), supplemented by analysis of
+the Fern-generated documentation \citep{agentverse2026docs}, \textsc{sdk}
+source code, and community resources.
 
 Key findings from the audit:
 
@@ -520,8 +536,11 @@ token.
 beyond the basic bearer token (notably, mailbox endpoints require agent-level
 attestation via challenge-response).
 
-\item \textbf{V2 Almanac and most V2 Hosting endpoints return 404}---they are
-documented but not yet deployed to production.
+\item \textbf{V2 Almanac resolve is operational} (returning full agent records);
+other V2 Almanac endpoints return 404.  Several V2 Hosting list endpoints
+(\texttt{/agents}, \texttt{/secrets}, \texttt{/storage}) are deployed but
+require authentication (401); most V2 Hosting per-agent endpoints return
+404---documented but not yet available in production.
 
 \item \textbf{The practical working \textsc{api} mixes V2 for agent
 \textsc{crud}} (create, read, update, delete) \textbf{and V1 for hosting,
@@ -549,7 +568,11 @@ Section~\ref{sec:gaps}.  The discrepancy between documented and deployed
 endpoints is itself instructive: it suggests that the platform team has
 articulated a broader vision than the current production system realises,
 consistent with our characterisation of Agentverse as an early-stage agent
-cloud undergoing rapid expansion.
+cloud undergoing rapid expansion.  We note that the \textsc{api} surface is
+actively evolving; some endpoints documented at the time of our audit have
+since been modified, consolidated, or deprecated, and new ones may have
+been added.  All quantitative endpoint claims in this paper should be read
+with this dynamism in mind.
 
 \subsection{What Currently Works Well}
 \label{subsec:strengths}
@@ -574,10 +597,11 @@ the Almanac without approval, enabling a genuinely open ecosystem.  The over
 36,000 agents discoverable in the Almanac as of Q1 2026 reflects the traction
 this openness creates.
 
-\textbf{Multi-model \textsc{llm} access.} ASI:One provides access to seven
-specialised models via a single \textsc{api}, including an agentic model family
-designed for tool use and multi-step reasoning, and a graph model for
-structured knowledge tasks.
+\textbf{Unified \textsc{llm} access.} ASI:One provides a single \textsc{api}
+(\texttt{asi1}) that automatically adapts its capabilities to the request,
+encompassing agentic reasoning, tool use, extended analysis, and structured
+knowledge tasks.  A lightweight \texttt{asi1-mini} variant complements it for
+resource-constrained applications.
 
 \textbf{Native payment protocol.} The integration of payment as a first-class
 protocol (rather than a bolt-on billing system) reflects a principled design
@@ -589,9 +613,9 @@ Agentverse is built on an open blockchain, meaning that the Almanac, agent
 identities, and on-chain transactions are not owned by any single corporation
 and cannot be unilaterally revoked.
 
-These strengths position Agentverse as the correct foundation on which to build
-the agent cloud of 2030.  The gap analysis that follows should be read not as
-a critique but as a roadmap.
+These strengths position Agentverse as the strongest decentralised foundation
+currently available for building the agent cloud of 2030.  The gap analysis
+that follows should be read not as a critique but as a roadmap.
 
 % =============================================================================
 \section{Gap Analysis: What the Agent Cloud Is Missing}
@@ -616,7 +640,7 @@ state mechanism available to hosted agents.  It corresponds roughly to writing
 to a flat file: there is no schema, no query capability, no indexing, no size
 quota visibility, and no sharing between agents.
 
-Contemporary agent memory research \citep{mem0blog2026,zepgraphiti2025}
+Contemporary agent memory research \citep{mem0blog2026,zepgraphiti2025,yang2026graphsurvey}
 distinguishes four cognitively motivated memory types: \emph{episodic} (what
 happened, when, with whom), \emph{semantic} (facts, concepts, relationships),
 \emph{procedural} (how to do things, learned workflows), and \emph{working}
@@ -624,7 +648,8 @@ happened, when, with whom), \emph{semantic} (facts, concepts, relationships),
 hosted, authenticated services for each type.  The analogy to general-purpose
 cloud is precise: \texttt{ctx.storage} is to agent memory what writing to a
 local disk is to web application data---it works for a single instance in
-development but fails in production at scale.
+development but fails in production at scale.  Table~\ref{tab:gap-memory}
+summarises the seven gaps we identify in this category.
 
 \begin{table}[htbp]
 \centering
@@ -673,6 +698,7 @@ This stands in stark contrast to the rich observability ecosystems that have
 emerged for \textsc{llm} applications---LangSmith \citep{langsmith2026},
 AgentOps \citep{agentops2026}, and Langfuse \citep{langfuse2026}---all of
 which offer distributed tracing, token cost tracking, and behaviour analytics.
+Table~\ref{tab:gap-obs} enumerates the eight gaps in this category.
 
 \begin{table}[htbp]
 \centering
@@ -719,7 +745,8 @@ This is a significant concern given the OWASP Agentic AI Security Top 10
 hijacking, and cascading failures as the primary risk categories for autonomous
 agents.  The absence of a platform-level policy engine means that developers
 must implement all safety controls within agent code---which is both
-error-prone and inconsistent.
+error-prone and inconsistent.  Table~\ref{tab:gap-security} lists the eight
+security and governance gaps identified.
 
 \begin{table}[htbp]
 \centering
@@ -766,7 +793,8 @@ in an A2A task graph---it must use an adapter
 (\texttt{uagents-adapter[a2a-inbound/outbound]}) that translates between
 protocols.  As A2A becomes the de facto enterprise standard, this gap risks
 positioning Agentverse as an isolated ecosystem rather than a participant in
-the broader agentic web.
+the broader agentic web.  Table~\ref{tab:gap-networking} enumerates the
+eight networking and communication gaps.
 
 \begin{table}[htbp]
 \centering
@@ -807,7 +835,8 @@ projects, dependency declaration, or module imports beyond what the platform
 pre-installs.  There is no version control for deployed code, no staging
 environment, no \textsc{ci/cd} integration, and no local development
 emulator---meaning that all testing must be done against production
-infrastructure.
+infrastructure.  Table~\ref{tab:gap-dev} summarises the eight development
+and lifecycle gaps.
 
 \begin{table}[htbp]
 \centering
@@ -851,6 +880,7 @@ connecting \textsc{ai} agents to external tools.  A managed \textsc{mcp} server
 marketplace---offering agents access to web search, calendar, email, code
 execution, browser control, and database services---would dramatically expand
 the capability surface of every agent on the platform.
+Table~\ref{tab:gap-data} lists the seven data and integration service gaps.
 
 \begin{table}[htbp]
 \centering
@@ -892,7 +922,8 @@ design \citep{myerson2007mechanism}---to describe the set of basic operations
 that a functional agent economy requires: payment (exists), reputation
 (rudimentary), lending, insurance, and price discovery (all absent).  Each has
 a direct precedent in human financial systems and is tractable to implement on
-a programmable blockchain.
+a programmable blockchain.  Table~\ref{tab:gap-economy} enumerates the eight
+economic primitive gaps.
 
 \begin{table}[htbp]
 \centering
@@ -933,7 +964,8 @@ platform has not published uptime \textsc{sla}s, compliance certifications, or
 dedicated compute options.  These gaps are significant for enterprise adoption
 in regulated industries---financial services, healthcare, legal---where
 guaranteed uptime, data residency, and compliance certifications are
-prerequisites.
+prerequisites.  Table~\ref{tab:gap-enterprise} details the eight scale and
+enterprise gaps.
 
 \begin{table}[htbp]
 \centering
@@ -967,7 +999,7 @@ Regions & \medium \\
 \subsection{Summary}
 \label{subsec:gap-summary}
 
-Across the eight categories, we identify \textbf{52 distinct capability gaps}.
+Across the eight categories, we identify \textbf{62 distinct capability gaps}.
 The concentration of High-severity gaps in Categories A (Memory), C (Security),
 D (Networking), E (Development), F (Data Services), and H (Enterprise) reflects
 the platform's current positioning as a capable prototype rather than a
@@ -985,10 +1017,15 @@ designed to close the gaps while preserving these advantages.
 
 Drawing on the gap analysis of Section~\ref{sec:gaps} and the cloud computing
 reference model of Section~\ref{subsec:cloud-reference}, we propose a
-seven-layer reference architecture for a fully realised agent cloud platform.
-Each layer addresses one or more gap categories from Section~\ref{sec:gaps}.
-The layers are ordered from infrastructure (Layer~0) to application (Layer~6),
-following the convention of the \textsc{osi} model.
+seven-layer reference architecture for a fully realised \textsc{aaas} (Agents
+as a Service) cloud platform.  This stack is the \textsc{aaas} equivalent of
+the \textsc{osi} model: a principled decomposition of every capability an
+agent cloud must provide, from cryptographic identity at the substrate to
+economic exchange at the application layer.  Each layer addresses one or more
+gap categories from Section~\ref{sec:gaps}.  The layers are ordered from
+infrastructure (Layer~0) to application (Layer~6), following the convention
+of the \textsc{osi} model.  The complete stack is depicted in
+Figure~\ref{fig:stack}.
 
 \begin{figure}[htbp]
 \centering
@@ -1405,7 +1442,8 @@ agent markets with heterogeneous participants is an open problem.
 \subsection{Regulatory Considerations}
 \label{subsec:regulatory}
 
-The EU AI Act (high-risk provisions in force from August 2, 2026) classifies
+The EU AI Act (Regulation (EU)~2024/1689; high-risk provisions in force from
+August~2, 2026) classifies
 \textsc{ai} systems by risk level.  Autonomous agents taking consequential
 actions---financial transactions, medical decisions, legal submissions---are
 likely to be classified as high-risk, triggering requirements for human
@@ -1420,7 +1458,7 @@ compliance tiers for regulated industries.
 \subsection{Limitations}
 \label{subsec:limitations}
 
-Our analysis has three principal limitations.  First, it is grounded in a
+Our analysis has four principal limitations.  First, it is grounded in a
 single platform at a specific time; some gaps may not generalise to platforms
 with different architectural choices.  Second, the 2030 projections are
 conditional on current trajectories and could be materially altered by
@@ -1428,6 +1466,13 @@ technical breakthroughs or regulatory intervention.  Third, the economic
 primitives in Sections~\ref{subsec:layer6} and~\ref{subsec:path-economy} are
 proposed without formal analysis of their incentive properties; rigorous
 mechanism design treatment of each would require dedicated theoretical work.
+Fourth, the empirical audit is categorical rather than quantitative: we
+characterise endpoints as operational, partially deployed, or absent, but do
+not report \textsc{api} response-time distributions, storage throughput
+benchmarks, or Almanac search quality metrics.  Future work should conduct
+controlled performance experiments to complement this taxonomy with
+quantitative empirical data, which would materially strengthen the
+contribution for submission to a peer-reviewed venue.
 
 % =============================================================================
 \section{Conclusion}
@@ -1435,8 +1480,8 @@ mechanism design treatment of each would require dedicated theoretical work.
 % =============================================================================
 
 We have presented a systematic analysis of the Agentverse platform as a case
-study in agent-native cloud infrastructure.  Our empirical audit of 204
-\textsc{api} endpoints reveals 52 capability gaps across eight
+study in agent-native cloud infrastructure.  Our empirical audit of 204 \textsc{api} endpoints (as documented in Q1~2026)
+reveals 62 capability gaps across eight
 categories---from agent memory and observability to security, communication,
 data services, economic primitives, and enterprise-grade scaling.  These gaps
 are not failures of vision but the natural condition of pioneering
@@ -1466,7 +1511,10 @@ communicate across platforms, verify each other's identity, and transact
 economically---will shape outcomes in commerce, science, and governance far
 beyond the scope of any individual agent application.  Agentverse, uniquely
 among current platforms, is architecturally positioned to provide that
-infrastructure in an open, decentralised, and composable form.  The distance
+infrastructure in an open, decentralised, and composable form.  The seven-layer
+stack we propose constitutes the full \textsc{aaas} (Agents as a Service)
+model: the principled service abstraction for the agentic era, as foundational
+to the agent cloud as \textsc{iaas} was to the compute cloud.  The distance
 between where it is today and where it needs to be by 2030 is large but
 well-defined.  This paper is a map of that distance.
 
