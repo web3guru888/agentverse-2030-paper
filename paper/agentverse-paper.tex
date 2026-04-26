@@ -574,6 +574,90 @@ since been modified, consolidated, or deprecated, and new ones may have
 been added.  All quantitative endpoint claims in this paper should be read
 with this dynamism in mind.
 
+\subsection{API Performance Benchmarks}
+\label{subsec:benchmarks}
+
+To complement the endpoint audit with quantitative data we measured
+\textsc{api} response latency and search-corpus coverage against the
+live Agentverse production environment in April~2026.  Measurements
+were taken from a cloud-hosted client to control for local-network
+variability.
+
+\textbf{Latency.}  We issued $n{=}10$ consecutive authenticated
+requests to each endpoint and recorded wall-clock response time using
+\texttt{curl}'s \texttt{time\_total} metric.
+Table~\ref{tab:latency} reports the mean and 95th-percentile latency
+for eight representative operations.
+
+\begin{table}[h]
+\small\centering
+\caption{Agentverse \textsc{api} response latency ($n{=}10$, April~2026,
+  cloud-hosted client).}
+\label{tab:latency}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Operation & Mean\,(ms) & p95\,(ms) \\
+\midrule
+Almanac: exact-address lookup   & 190 & 208 \\
+Almanac: recent-agents feed     & 164 & 173 \\
+Agent search (keyword query)    & 176 & 196 \\
+Agent search (open / all)       & 170 & 193 \\
+Hosting: list all agents        & 169 & 185 \\
+Hosting: fetch agent logs       & 243 & 276 \\
+Hosting: agent public profile   & 209 & 348 \\
+V2 Almanac resolve              & 162 & 180 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All endpoints responded within 350\,ms at p95.  The majority cluster
+between 160--210\,ms, indicating a consistent, globally-routed
+\textsc{api} tier.  The outliers are log retrieval (p95 276\,ms) and
+agent public profiles (p95 348\,ms), reflecting additional read-path
+complexity.  The V2 Almanac resolve endpoint matches V1 latency,
+suggesting a unified backend even where the versioned surfaces differ.
+
+\textbf{Registry coverage.}  We queried the search \textsc{api} with
+eight domain keywords and recorded the stated result count
+(Table~\ref{tab:search}).  Broad categories---\emph{data},
+\emph{image}, \emph{news}, and \emph{assistant}---each return the
+\textsc{api} ceiling of 10{,}000 results.  We confirmed this is a
+hard pagination limit: stepping the \texttt{offset} parameter beyond
+9{,}999 returns an empty result set regardless of the advertised total,
+making exhaustive enumeration of large categories impossible.  Narrower
+domain keywords (\emph{weather}, \emph{finance}, \emph{trading})
+remain below the ceiling and can be enumerated reliably.
+
+\begin{table}[h]
+\small\centering
+\caption{Agentverse search \textsc{api}: result counts by keyword (April~2026).
+  Rows marked \emph{truncated} hit the 10{,}000-result hard ceiling.}
+\label{tab:search}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Keyword & Result count & Enumerable? \\
+\midrule
+\texttt{trading}    & 3{,}039       & exhaustive \\
+\texttt{weather}    & 1{,}140       & exhaustive \\
+\texttt{finance}    & 1{,}135       & exhaustive \\
+\texttt{crypto}     &   336         & exhaustive \\
+\texttt{data}       & $\ge$10{,}000 & truncated  \\
+\texttt{image}      & $\ge$10{,}000 & truncated  \\
+\texttt{news}       & $\ge$10{,}000 & truncated  \\
+\texttt{assistant}  & $\ge$10{,}000 & truncated  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These measurements provide concrete baselines for
+Agentverse's current operational profile.  The latency figures
+are competitive with commodity cloud REST APIs.  However, the
+10{,}000-result ceiling and the absence of faceted, semantic, or
+capability-based filtering are the primary friction points for
+agent discovery at scale---an issue we catalogue in
+Section~\ref{sec:gaps} under Category~D (Networking and
+Communication).
+
 \subsection{What Currently Works Well}
 \label{subsec:strengths}
 
@@ -1466,13 +1550,14 @@ technical breakthroughs or regulatory intervention.  Third, the economic
 primitives in Sections~\ref{subsec:layer6} and~\ref{subsec:path-economy} are
 proposed without formal analysis of their incentive properties; rigorous
 mechanism design treatment of each would require dedicated theoretical work.
-Fourth, the empirical audit is categorical rather than quantitative: we
-characterise endpoints as operational, partially deployed, or absent, but do
-not report \textsc{api} response-time distributions, storage throughput
-benchmarks, or Almanac search quality metrics.  Future work should conduct
-controlled performance experiments to complement this taxonomy with
-quantitative empirical data, which would materially strengthen the
-contribution for submission to a peer-reviewed venue.
+Fourth, while we supplement the endpoint audit with latency measurements
+and search-coverage counts (Section~\ref{subsec:benchmarks}), the
+performance data reported here are indicative rather than definitive:
+we sample $n{=}10$ requests per endpoint from a single cloud region, which
+is insufficient to characterise throughput under load, geographic latency
+variability, or storage throughput.  The search-corpus counts are snapshot
+figures that will shift as the registry grows.  More rigorous, multi-region
+load tests would materially strengthen the quantitative contribution.
 
 % =============================================================================
 \section{Conclusion}

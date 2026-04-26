@@ -1,0 +1,226 @@
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{AgentOps}(2026)]{agentops2026}
+{AgentOps}.
+\newblock {AgentOps}: {AI} agent monitoring.
+\newblock \url{https://agentops.ai}, 2026.
+
+\bibitem[{Amazon Web Services}(2025)]{aws2025bedrock}
+{Amazon Web Services}.
+\newblock {Amazon Bedrock AgentCore}.
+\newblock \url{https://aws.amazon.com/bedrock/agentcore/}, 2025.
+\newblock Platform GA: October 13, 2025. Policy component GA: March 3, 2026.
+  Evaluations component GA: March 31, 2026.
+
+\bibitem[{Anthropic}(2025)]{mcp2025spec}
+{Anthropic}.
+\newblock Model context protocol specification (2025-11-25).
+\newblock \url{https://modelcontextprotocol.io/specification/2025-11-25}, 2025.
+\newblock MCP uses date-string versioning. Latest spec as of April 2026:
+  2025-11-25 (November 25, 2025). 110M+ monthly downloads.
+
+\bibitem[{ASI Alliance}(2026)]{asichain2026}
+{ASI Alliance}.
+\newblock {ASI Chain}: {AI}-native blockchain infrastructure.
+\newblock \url{https://superintelligence.io}, 2026.
+\newblock DevNet beta: October 2025; TestNet: Q2 2026; Mainnet target: late
+  2026 / early 2027. Based on F1R3FLY blockDAG architecture.
+
+\bibitem[{Bessemer Venture Partners}(2026)]{bvp2026security}
+{Bessemer Venture Partners}.
+\newblock Securing {AI} agents: The defining cybersecurity challenge of 2026.
+\newblock \url{https://www.bvp.com/atlas}, 2026.
+
+\bibitem[{ChainUp}(2026)]{chainup2026kya}
+{ChainUp}.
+\newblock Know your agent ({KYA}): The 2026 shift in {AI} \& crypto.
+\newblock \url{https://chainup.com/blog}, 2026.
+
+\bibitem[Chan et~al.(2025)Chan, Wei, Huang, Rajkumar, Perrier, Lazar, Hadfield,
+  and Anderljung]{chan2025infrastructure}
+Alan Chan, Kevin Wei, Sihao Huang, Nitarshan Rajkumar, Elija Perrier, Seth
+  Lazar, Gillian~K. Hadfield, and Markus Anderljung.
+\newblock Infrastructure for {AI} agents.
+\newblock \emph{Transactions on Machine Learning Research}, 2025.
+\newblock arXiv:2501.10114.
+
+\bibitem[{Coinbase / Agentic.Market}(2026)]{agenticmarket2026}
+{Coinbase / Agentic.Market}.
+\newblock An app store for {AI} agents.
+\newblock \url{https://banklesstimes.com}, 2026.
+\newblock April 2026.
+
+\bibitem[{EPH4 and WhatIsWeb4}(2026)]{eph4ai2026}
+{EPH4 and WhatIsWeb4}.
+\newblock {Web} 4.0: Agentic {AI} and the symbiotic {Web}.
+\newblock \url{https://eph4.ai}, 2026.
+
+\bibitem[{Fetch.ai}(2024)]{asialliance2024merger}
+{Fetch.ai}.
+\newblock Fetch.ai, {SingularityNET}, and {Ocean Protocol} unite to create the
+  {Artificial Superintelligence Alliance}.
+\newblock \url{https://fetch.ai/blog}, 2024.
+\newblock Token merger finalized July 15, 2024. Ocean Protocol subsequently
+  withdrew October 9, 2025.
+
+\bibitem[{Fetch.ai}(2026{\natexlab{a}})]{agentverse2026docs}
+{Fetch.ai}.
+\newblock Agentverse platform documentation.
+\newblock \url{https://agentverse.ai}, 2026{\natexlab{a}}.
+\newblock Accessed April 2026.
+
+\bibitem[{Fetch.ai}(2026{\natexlab{b}})]{fetchai2026payments}
+{Fetch.ai}.
+\newblock Fetch.ai agent payment system.
+\newblock \url{https://fetch.ai}, 2026{\natexlab{b}}.
+\newblock Includes Skyfire USDC on Base (partnership confirmed BusinessWire
+  June 26, 2025 KYAPay launch), Stripe, and ASI on-chain payments.
+
+\bibitem[{Fetch.ai}(2026{\natexlab{c}})]{uagents2026sdk}
+{Fetch.ai}.
+\newblock {uAgents} framework (v0.24.2).
+\newblock \url{https://uagents.fetch.ai/docs}, 2026{\natexlab{c}}.
+\newblock Python-only framework. v0.24.2 released April 17, 2026. v0.24.1 added
+  initial A2A adapter support.
+
+\bibitem[Garzon et~al.(2025)]{garzon2025agentdid}
+Sandro~Rodriguez Garzon et~al.
+\newblock {AI} agents with decentralized identifiers and verifiable
+  credentials.
+\newblock arXiv preprint arXiv:2511.02841, 2025.
+\newblock Accepted ICAART 2026 (18th International Conference on Agents and
+  Artificial Intelligence). v2: December 15, 2025.
+
+\bibitem[{Google}(2026)]{google2026next}
+{Google}.
+\newblock {Gemini Enterprise Agent Platform} ({Google Cloud Next} 2026).
+\newblock
+  \url{https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26},
+  2026.
+\newblock Announced April 22, 2026. Vertex AI rebranded as Gemini Enterprise
+  Agent Platform; Agentspace absorbed into unified Gemini Enterprise product.
+
+\bibitem[Hadfield and Koh(2025)]{hadfield2025agenteconomy}
+Gillian~K. Hadfield and Andrew Koh.
+\newblock An economy of {AI} agents.
+\newblock arXiv preprint arXiv:2509.01063, 2025.
+\newblock Submitted September 1, 2025. Hadfield: Johns Hopkins; Koh: MIT.
+
+\bibitem[Kantor(2026)]{kantor2026stateofagents}
+Michael Kantor.
+\newblock State of {AI} agents --- {March} 2026.
+\newblock DEV Community, \url{https://dev.to}, 2026.
+\newblock Cross-platform snapshot, March 2026. Reports 36,338 agents on
+  AgentVerse (Fetch.ai), representing 34.8\% share of catalogued agents.
+  Fetch.ai Nov 2025 press release cited 2M+ agents in broader ecosystem.
+
+\bibitem[{LangChain}(2026)]{langsmith2026}
+{LangChain}.
+\newblock {LangSmith}: Observability for {LLM} applications.
+\newblock \url{https://smith.langchain.com}, 2026.
+
+\bibitem[{Langfuse}(2026)]{langfuse2026}
+{Langfuse}.
+\newblock Langfuse: Open-source {LLM} engineering platform.
+\newblock \url{https://langfuse.com}, 2026.
+
+\bibitem[{Linux Foundation and Google}(2026)]{a2a2026}
+{Linux Foundation and Google}.
+\newblock {Agent2Agent} ({A2A}) protocol v1.0.
+\newblock \url{https://a2a-protocol.org}, 2026.
+\newblock v1.0 announced April 9, 2026. 150+ supporting organisations. Linux
+  Foundation governance. Founding TSC partners: AWS, Cisco, Google, IBM
+  Research, Microsoft, Salesforce, SAP, ServiceNow. Adds Signed Agent Cards and
+  formal AP2 extension.
+
+\bibitem[{MCP Core Maintainers}(2026)]{mcp2026roadmap}
+{MCP Core Maintainers}.
+\newblock The 2026 {MCP} roadmap.
+\newblock \url{https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/},
+  2026.
+\newblock March 2026. Explicitly states: ``MCP's current spec release came out
+  in November 2025. We haven't cut a new version since''.
+
+\bibitem[{Mem0}(2026)]{mem0blog2026}
+{Mem0}.
+\newblock State of {AI} agent memory 2026.
+\newblock \url{https://mem0.ai/blog/state-of-ai-agent-memory-2026}, 2026.
+\newblock Reports 21 frameworks, 19 vector stores, 3 hosting models: managed
+  cloud, open-source self-hosted, and local MCP.
+
+\bibitem[{Microsoft}(2025)]{microsoft2025entra}
+{Microsoft}.
+\newblock {Microsoft Entra Agent ID}.
+\newblock \url{https://learn.microsoft.com/en-us/entra/}, 2025.
+\newblock First announced May 2025; public preview expanded at Microsoft Ignite
+  November 2025; governance capabilities extended at RSAC 2026. Agent 365 GA
+  May 1, 2026.
+
+\bibitem[{Microsoft Open Source}(2026)]{microsoft2026governance}
+{Microsoft Open Source}.
+\newblock Introducing the {Agent Governance Toolkit}.
+\newblock \url{https://github.com/microsoft/agent-governance-toolkit}, 2026.
+\newblock Open-sourced April 2, 2026. MIT licence. Covers all 10 OWASP Agentic
+  Top 10 risks. Available in Python, TypeScript, Rust, Go, and .NET.
+
+\bibitem[{MolTrust}(2026)]{moltrust2026}
+{MolTrust}.
+\newblock Trust infrastructure for {AI} agents.
+\newblock \url{https://moltrust.ch}, 2026.
+\newblock W3C Verifiable Credentials for AI agents; ERC-8004 on-chain
+  registration; Base blockchain anchoring; MCP server available.
+
+\bibitem[Myerson(2007)]{myerson2007mechanism}
+Roger~B. Myerson.
+\newblock Mechanism design.
+\newblock Nobel Prize Lecture, Royal Swedish Academy of Sciences, 2007.
+\newblock \url{https://www.nobelprize.org/prizes/economic-sciences/2007/}.
+
+\bibitem[{Ocean Protocol Foundation}(2025)]{ocean2025withdrawal}
+{Ocean Protocol Foundation}.
+\newblock The {ASI Alliance} from {Ocean}'s perspective.
+\newblock \url{https://blog.oceanprotocol.com}, 2025.
+\newblock Ocean Protocol Foundation announced withdrawal effective October
+  9--10, 2025. Subsequent litigation over 263M FET.
+
+\bibitem[{OWASP Foundation}(2025)]{owasp2025agentic}
+{OWASP Foundation}.
+\newblock {OWASP} top 10 for agentic applications.
+\newblock \url{https://genai.owasp.org}, 2025.
+\newblock Published December 9, 2025.
+
+\bibitem[Refai-Ahmed et~al.(2025)Refai-Ahmed, Tatipamula, Zhirnov, Hussein, and
+  Shami]{hussein2025forecast}
+Gamal Refai-Ahmed, Mallik Tatipamula, Victor Zhirnov, Ahmed~Refaey Hussein, and
+  Abdallah Shami.
+\newblock When intelligence overloads infrastructure: {A} forecast model for
+  {AI}-driven bottlenecks.
+\newblock arXiv preprint arXiv:2511.07265, 2025.
+\newblock Projects AI agent population to grow ${\sim}100{\times}$ between 2026
+  and 2036, reaching trillions of instances. Submitted by Hussein (4th author);
+  lead author: Refai-Ahmed.
+
+\bibitem[{W3C}(2022)]{w3c2022did}
+{W3C}.
+\newblock Decentralized identifiers ({DIDs}) v1.0.
+\newblock \url{https://www.w3.org/TR/did-core/}, 2022.
+
+\bibitem[Yang et~al.(2026)Yang, Zhou, et~al.]{yang2026graphsurvey}
+Chang Yang, Chuang Zhou, et~al.
+\newblock Graph-based agent memory: Taxonomy, techniques, and applications.
+\newblock arXiv preprint arXiv:2602.05665, 2026.
+\newblock Survey paper, DEEP-PolyU group. Published February 5, 2026.
+
+\bibitem[{Zep AI}(2025)]{zepgraphiti2025}
+{Zep AI}.
+\newblock Zep: {A} temporal knowledge graph architecture for agent memory.
+\newblock arXiv preprint arXiv:2501.13956, 2025.
+\newblock Achieves 63.8\% accuracy on LongMemEval (GPT-4o) vs 49.0\% for flat
+  vector stores.
+
+\end{thebibliography}
